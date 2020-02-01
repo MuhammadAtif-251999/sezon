@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:adjustViewBounds="true"
+            android:background="@color/black"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/rideCar_title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:text="@string/title_activity_add_detail_send"
+            android:textAllCaps="true"
+            android:textColor="@color/material_light_white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+            <TextView
+                android:background="@drawable/bg_pay"
+                android:id="@+id/title_desk"
+                android:layout_width="match_parent"
+                android:layout_height="35sp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/send_item_description"
+                android:textAllCaps="true"
+                android:textSize="17dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/title_desk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/mSend_goods_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:hint="@string/send_description"
+                    android:inputType="text"
+                    android:background="@color/transparent"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                android:background="@drawable/bg_pay"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/sender"
+                android:id="@+id/title_pengirim"
+                android:textAllCaps="true" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/title_pengirim"
+                android:id="@+id/nama_pengirim"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/mSend_sender_name"
+                    android:layout_width="match_parent"
+
+                    android:background="@color/transparent"
+                    android:layout_height="50sp"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawableStart="@drawable/ic_person"
+                    android:hint="@string/send_sender_name"
+                    android:inputType="text"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/nama_pengirim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/mSend_sender_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_phone_number"
+                    android:drawableStart="@drawable/ic_phone_number"
+                    android:hint="@string/send_sender_phone"
+                    android:inputType="phone"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:background="@drawable/bg_pay"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="15dp"
+                android:id="@+id/title_penerima"
+                android:paddingRight="15dp"
+                android:text="@string/receiver"
+                android:textAllCaps="true" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/title_penerima"
+                android:id="@+id/nama_penerima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/mSend_receiver_name"
+                    android:layout_width="match_parent"
+                    android:drawableLeft="@drawable/ic_person"
+
+                    android:layout_height="50sp"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/ic_person"
+                    android:hint="@string/send_receiver_name"
+                    android:inputType="text"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@id/nama_penerima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/mSend_receiver_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/ic_phone_number"
+                    android:drawableStart="@drawable/ic_phone_number"
+                    android:hint="@string/send_receiver_phone"
+                    android:inputType="phone"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deta"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/mSend_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true">
+
+
+
+                        <RadioGroup
+                            android:visibility="gone"
+                            android:id="@+id/rideCar_paymentGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/material_light_white"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rideCar_mPayPayment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:text="@string/text_mPay"
+                                android:textColor="@color/biruText"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:theme="@style/PaymentButton" />
+
+
+                            <RadioButton
+                                android:id="@+id/rideCar_cashPayment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:checked="true"
+                                android:text="@string/text_cash"
+                                android:textColor="@color/biruText"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:theme="@style/PaymentButton" />
+
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:weightSum="1"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="50dp">
+
+                            <RelativeLayout
+                                android:layout_weight="0.33"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+
+                                    android:visibility="gone"
+                                    android:id="@+id/pakai_pay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_pakai_pay"/>
+
+                                    <TextView
+
+                                        android:id="@+id/ova"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_height="wrap_content"
+                                        android:text="Pakai Ova"
+                                        android:textColor="@color/material_blue_grey_700"
+                                        android:textSize="12dp" />
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:id="@+id/pakai_cash"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_pakai_tunai"/>
+
+                                    <TextView
+                                        android:textSize="12dp"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:text="Bayar Tunai"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_height="wrap_content" />
+
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_weight="0.33"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <ImageView
+
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_jarak_tempuh"/>
+                                <TextView
+                                    android:textSize="12dp"
+                                    android:id="@+id/mSend_distance"
+                                    android:gravity="center"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jarak"/>
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/mSend_topUp"
+                                android:layout_weight="0.33"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_dompet"/>
+                                <TextView
+                                    android:id="@+id/mSend_mPayBalance"
+                                    android:textSize="12dp"
+                                    android:gravity="center"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dompet"/>
+
+                                <Button
+                                    android:visibility="gone"
+                                    android:id="@+id/rideCar_topUp"
+                                    style="@style/Widget.AppCompat.Button.Borderless"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/text_topUp"
+                                    android:textColor="@color/material_blue_grey_700" />
+                            </RelativeLayout>
+
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textColor="@color/greyText"
+                        android:text="Payment Metod"/>
+                    <LinearLayout
+                        android:id="@+id/goru"
+                        android:weightSum="1"
+                        android:background="@drawable/bg_bayar"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/piliy_pay"
+                            android:paddingBottom="3dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/bg_pilih_pay"
+                            android:layout_weight="0.50"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txtdisk"
+                                android:layout_marginTop="9dp"
+                                android:layout_toLeftOf="@id/discountText"
+                                android:textSize="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp."/>
+                            <TextView
+                                android:layout_marginTop="9dp"
+                                android:id="@+id/discountText"
+                                android:layout_centerHorizontal="true"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10k"/>
+                            <TextView
+                                android:textSize="15dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ova"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/piliy_cash"
+                            android:paddingBottom="3dp"
+                            android:layout_margin="5dp"
+                            android:clickable="true"
+                            android:background="@drawable/bg_pilih_pay"
+                            android:layout_weight="0.50"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_toLeftOf="@id/mSend_price"
+                                android:layout_marginTop="9dp"
+                                android:textSize="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp"/>
+
+                            <TextView
+
+                                android:id="@+id/mSend_price"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="9dp"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp"/>
+
+                            <TextView
+
+                                android:textSize="15dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cash"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/mSend_order"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_pesan"
+                        android:text="@string/text_order"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RadioGroup
+                android:visibility="gone"
+                android:id="@+id/mSend_paymentGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_light_white"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/mSend_mPayPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="@string/text_mPay"
+                    android:textColor="@color/greyText"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:theme="@style/PaymentButton" />
+
+
+                <RadioButton
+                    android:id="@+id/mSend_cashPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checked="true"
+                    android:text="@string/text_cash"
+                    android:textColor="@color/greyText"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:theme="@style/PaymentButton" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

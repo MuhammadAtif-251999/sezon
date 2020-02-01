@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemMassageMenu_item"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:foreground="?attr/selectableItemBackground">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/itemMassageMenu_image"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="70dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_mbox_pickup" />
+
+    <TextView
+        android:layout_below="@id/itemMassageMenu_image"
+        android:id="@+id/itemMassageMenu_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textAllCaps="true"
+        android:textColor="@color/greyText"
+        android:textSize="12sp"
+        tools:text="MENU 1" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

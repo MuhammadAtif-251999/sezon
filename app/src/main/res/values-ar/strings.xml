@@ -1,0 +1,303 @@
+<resources>
+    <string name="app_name">سيزون</string>
+
+    <string name="main_menuHome">الصفحة الرئيسية</string>
+    <string name="main_menuHistory">المعاملات السابقة</string>
+    <string name="main_menuHelp">مساعدة</string>
+    <string name="main_menuSetting">الاعدادات</string>
+    <string name="main_pickLocation">اختيار الموقع</string>
+    <string name="permission_dialog">الوصول إلى أذونات الموقع مطلوبة</string>
+
+    <string name="go_to_permissions_settings">انتقل إلى إعدادات التطبيق وفعل تمكين الأذونات</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+
+
+    <string name="title_activity_ticket">حجز تذكرة</string>
+    <string name="lbl_duration">المدة</string>
+    <string name="lbl_genre">الجنس</string>
+    <string name="lbl_rating">تقييم</string>
+    <string name="lbl_price">السعر</string>
+    <string name="btn_buy_now">اشتري الان</string>
+    <string name="btn_coming_soon">قريبا</string>
+    <string name="msg_no_ticket_found">رمز ال QR غير معروف \ n يرجى الاتصال بالدعم</string>
+
+
+    <string name="home_mRide">جولة</string>
+    <string name="home_mCar">تاكسي</string>
+    <string name="home_mFood">طعام</string>
+    <string name="home_mMart">تسوق</string>
+    <string name="home_mSend">التوصيل</string>
+    <string name="home_mMassage">مساج</string>
+    <string name="home_mBox">نقطة البداية</string>
+    <string name="home_mService">الخدمات الالكترونية</string>
+    <string name="home_mAuto">تلقائي</string>
+    <string name="home_mClean">خالي</string>
+    <string name="home_mSchool">مدرسة</string>
+    <string name="home_mTour">جولة</string>
+    <string name="home_mGlam">Glam</string>
+    <string name="home_mStore">متجر</string>
+    <string name="home_mTicket">تذكرة</string>
+    <string name="home_mElectronic">الكتروني</string>
+    <string name="home_mLaundry">بقالة</string>
+    <string name="home_mTiket">النقد والاقتراحات</string>
+
+
+    <string name="hint_email">البريد الالكتروني</string>
+    <string name="hint_password">كلمة السر</string>
+    <string name="hint_firstName">الاسم الاول</string>
+    <string name="hint_lastName">الاسم الاخير</string>
+    <string name="hint_phoneNumber">رقم الهاتف </string>
+    <string name="hint_address">العنوان</string>
+    <string name="hint_dob">DOB</string>
+    <string name="hint_pob">POB</string>
+
+    <string name="text_mPay">المحفظة</string>
+    <string name="text_cash">النقود</string>
+    <string name="text_topUp">Top Up</string>
+    <string name="text_order">اطلب الان</string>
+    <string name="text_next">التالي</string>
+    <string name="text_send">ارسال</string>
+    <string name="text_save">حفظ</string>
+    <string name="text_noInternet">لا يوجد اتصال بالانترنت !</string>
+    <string name="text_close">مغلق</string>
+    <string name="text_updating">جاري التحميل ...</string>
+    <string name="text_addressNotAvailable">العنوان غير متاح</string>
+    <string name="text_cancel">الغاء</string>
+    <string name="text_profileName">اسم الملف الشخصي</string>
+    <string name="text_howToOrder">كيفية الطلب</string>
+
+    <string name="setting_profile">الملف الشخصي</string>
+    <string name="setting_changePassword">تغيير كلمة السر</string>
+    <string name="setting_privacyPolicy">الأحكام والشروط</string>
+    <string name="setting_faq">الاسئلة المكررة</string>
+    <string name="setting_mPayCredit">الرصيد عند الدفع</string>
+    <string name="setting_termOfService">شروط الخدمة</string>
+    <string name="tentang_kami">عنا</string>
+    <string name="setting_rateApps">اهداف التطبيق</string>
+    <string name="setting_callUs">اتصل بنا</string>
+    <string name="setting_logout">خروج</string>
+    <string name="setting_editProfile">تعديل</string>
+
+    <string name="setting_nameDummy">التوصيل السريع</string>
+    <string name="setting_emailDummy">info@sezon.io</string>
+    <string name="setting_phoneDummy">0123456789</string>
+
+    <string name="history_inProgress">في الطريق</string>
+    <string name="history_completed">اكتملت الرحلة</string>
+
+    <string name="waiting_pleaseWait">انتظر دقيقة</string>
+    <string name="waiting_desc">البحث عن سائق</string>
+    <string name="mart_searchLocation">البحث عن الموقع</string>
+
+    <string name="button_signIn">تسجيل دخول</string>
+    <string name="button_signUp">تسجيل جديد</string>
+    <string name="button_dontHaveAccount">لا تملك حساب بعد؟</string>
+    <string name="button_haveAccount">تملتك حساب مسبقا؟</string>
+
+    <string name="dialog_loading">جاري التحميل ..</string>
+
+    <string name="ride_location">نقطة البداية</string>
+    <string name="ride_destination">توصيل</string>
+
+    <string name="ride_note">ملاحظة للسائق</string>
+
+    <string name="ride_setPickUp">نقطة البداية</string>
+    <string name="ride_setDestination">توصيل</string>
+
+    <string name="ride_price">(0 كم)</string>
+    <string name="ride_cost">SDG. 0 ,-</string>
+    <string name="ride_mPayBalance">SDG. 0 ,-</string>
+    <string name="ride_discount">تخفيض 50% لاستخدام SVZ</string>
+
+    <string name="mart_nearDriver">السائق في الارجاء</string>
+    <string name="mart_martName">اسم المتجر</string>
+    <string name="mart_mart">متجر</string>
+    <string name="mart_location">الموقع</string>
+    <string name="mart_order">اطلب</string>
+    <string name="mart_product">منتج</string>
+    <string name="mart_plus">+</string>
+    <string name="mart_minus">-</string>
+    <string name="mart_details">التفاصيل</string>
+    <string name="mart_to">توصيل</string>
+    <string name="mart_estimatedBiaya">التكاليف المقدرة</string>
+    <string name="mart_useLocation">استخدم هذا الموقع</string>
+    <string name="saran">اقتراحاتك \nساعدنا لنخدمك بشكل افضل</string>
+    <string name="saran_saran">قم بتقييم \nخدمتي</string>
+
+    <string name="sender">المرسل</string>
+    <string name="receiver">المستقبل</string>
+    <string name="send_item_description">وصف السلعة</string>
+    <string name="send_description">وصف السلعة</string>
+    <string name="send_sender_name">اسم المرسل</string>
+    <string name="send_sender_phone">رقم هاتف المرسل</string>
+    <string name="send_receiver_name">اسم المستقبل</string>
+    <string name="send_receiver_phone">رقم هاتف المستقبل</string>
+    <string name="payment_method">طريقة الدفع</string>
+    <string name="send_waktuDanAlamat">الوقت والعنوان</string>
+    <string name="send_tanggalDanJam">التاريح والزمن</string>
+    <string name="send_alamatAsal">عنوان المنشأ</string>
+    <string name="send_alamatTujuan">عنوان الوجهة</string>
+    <string name="send_penerima">المستقبل</string>
+    <string name="send_nama">الاسم</string>
+    <string name="send_nomor">رقم الهاتف</string>
+    <string name="send_namaBarang">اسم البضاعة</string>
+
+    <string name="mbox_cargo">Tipe Cargo</string>
+    <string name="mbox_pickup">نقطة البداية</string>
+    <string name="mbox_truck">شاحنة</string>
+    <string name="mbox_dimension">اكبر حجم 200x130x120</string>
+    <string name="mbox_maxweight">اكبر وزن 1000kg</string>
+    <string name="mbox_drivernear">السائق في الارجاء</string>
+    <string name="mbox_origin">نقطة البداية</string>
+    <string name="mbox_destination">الوجهة</string>
+    <string name="mbox_location">الموقع</string>
+    <string name="mbox_location_detail">اسم المكان</string>
+    <string name="mbox_destname">اسم المستقبل</string>
+    <string name="mbox_contact_person">الشخص الذي يمكن الاتصال به (اختياري)</string>
+    <string name="mbox_contact_receiver">الشخص الذي يمكن الاتصال به  (اجباري)</string>
+    <string name="mbox_name">الاسم</string>
+    <string name="mbox_phone">رقم الهاتف</string>
+    <string name="mbox_instruction">التعليمات (اختياري)</string>
+    <string name="mbox_nextdest">الوجهة القادمة</string>
+    <string name="mbox_remove">مسح</string>
+    <string name="mbox_item_deliver">تم توصيل البضائع</string>
+    <string name="mbox_items">Item</string>
+    <string name="mbox_note_items">Note for items</string>
+    <string name="mbox_extra_feature">خيارات اضافية</string>
+    <string name="mbox_loading_service">احتاج خدمات اضافية</string>
+    <string name="mbox_note">ملاحظة</string>
+    <string name="mbox_note_extra_feature">يساعدك السائق فقط على نقل العناصر الصغيرة من السيارة ، إذا كنت بحاجة إلى مزيد من المساعدة ، فيرجى التحقق من وجود مساعدة إضافية</string>
+    <string name="mbox_note_insurance">اختر مبلغ التأمين ونطاق التأمين وفقًا لقيمة البضائع واحتياجاتك</string>
+    <string name="mbox_additional">1 الشحن الإضافي</string>
+    <string name="mbox_picknow">Pick up now</string>
+    <string name="mbox_picklater">Pick up later</string>
+    <string name="mbox_insurance">التأمين</string>
+    <string name="mbox_insurance_count">SDG.0,-</string>
+    <string name="mbox_insurance_upto">INSURANCE up to SDG.0,- </string>
+    <string name="mbox_ganti_opsi">خيارات التغيير</string>
+    <string name="mbox_booking">زمن الطلب</string>
+    <string name="mbox_term">أوافق على الشروط والاحكام</string>
+    <string name="mbox_detail">ملاحظة للسائق</string>
+    <string name="mbox_noloading">لا توجد خدمة تحميل</string>
+    <string name="mbox_discount_code">رمز التخفيض</string>
+    <string name="mbox_input_code">ادخل الرمز</string>
+    <string name="mbox_btn_active">تفعيل</string>
+    <string name="mbox_payment">الدفع</string>
+    <string name="mbox_price">التكلفة</string>
+    <string name="mbox_loadingservice">اسال بعض الناس</string>
+    <string name="mbox_paywith">الدفع ب</string>
+    <string name="mbox_payment_method">طريقة الدفع</string>
+    <string name="mbox_setloc">استعمل هذا الموقع</string>
+    <string name="mbox_discount">تخفيض</string>
+
+    <string name="service_ac">خدمة التكييف</string>
+    <string name="service_layanan">الخدمة</string>
+    <string name="service_actype">نوع المكيف</string>
+    <string name="service_quantity">الكمية</string>
+    <string name="service_residential">نوع السكن</string>
+    <string name="service_problem">المشكلة</string>
+    <string name="service_promotion">رمز الترقية</string>
+    <string name="service_date">التاريخ</string>
+    <string name="service_time">الزمن</string>
+    <string name="service_price">السعر</string>
+    <string name="service_progress">سيساعدك الفنيون في حل مشكلة التكييف</string>
+
+    <string name="massage_pleaseWait">الرجاء الانتظار</string>
+    <string name="massage_massageType">نوع المساج</string>
+    <string name="massage_duration">مدة المساج</string>
+    <string name="massage_therapistPreference">العلاج المفضل</string>
+    <string name="massage_yourGender">جنسك</string>
+
+    <string name="massage_therapist">العلاج</string>
+
+    <string name="massage_genderMale">رجل</string>
+    <string name="massage_genderFemale">امراة</string>
+    <string name="massage_genderNoPreference">اي نوع</string>
+    <string name="massage_60duration">60 دقيقة</string>
+    <string name="massage_90duration">90 دقيقة</string>
+    <string name="massage_120duration">120 دقيقة</string>
+    <string name="massage_next">التالي</string>
+    <string name="massage_location">الموقع</string>
+    <string name="massage_dateTime">Date &amp; Time</string>
+    <string name="massage_scheduleAndAddress">الفترة الزمنية والعنوان</string>
+    <string name="massage_price">التكلفة</string>
+    <string name="massage_orderDetails">تفاصيل الطلب</string>
+    <string name="massage_additionalNotes">ملاحظات اضافية</string>
+    <string name="massage_tanggalPesanan">لا يمكن أن يكون وقت الطلب أقل من الوقت الحالي.</string>
+    <string name="massage_cost">SDG. 15.000 ,-</string>
+    <string name="massage_mPayBalance">SDG. 0 ,-</string>
+    <string name="massage_discount">تخفيض 25% لخدمات الدفع الالكترونية</string>
+    <string name="massage_status">الحالة</string>
+    <string name="massage_cancel">الغاء الطلب</string>
+    <string name="massage_cost_text">التكلفة</string>
+
+    <string name="title_activity_in_progress">في الطريق</string>
+    <string name="title_activity_rate_driver">تقييم السائق</string>
+    <string name="title_activity_help">بماذا يمكننا المساعدة؟</string>
+    <string name="title_activity_chat">دردشة</string>
+    <string name="title_activity_update_profile">تحديث الملف الشخصي</string>
+    <string name="title_activity_change_password">تغيير كلمة السر</string>
+    <string name="title_activity_term_of_service">شرط الخدمة</string>
+    <string name="title_activity_privacy_policy">سياسة الخصوصية</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_faq">الاسئلة المكررة</string>
+    <string name="title_activity_top_up">Top Up</string>
+
+    <array name="list_bank">
+        <item>بنك الخرطوم</item>
+        <item>بنك امدرمان</item>
+        <item>بنك فيصل</item>
+        <item>بنك النيل</item>
+    </array>
+
+    <string-array name="mpay">
+        <item>Tunai</item>
+    </string-array>
+
+    <string name="title_activity_history_detail">History Detail</string>
+    <string name="title_activity_send">Send</string>
+    <string name="title_activity_add_detail_send">اضافة تفاصيل</string>
+
+    <string name="food_search">بحث</string>
+    <string name="food_near">ماذا تريد أن تأكل اليوم؟</string>
+    <string name="food_neardesc">اختر مطعمك المفضل</string>
+    <string name="food_explore">اختر الكاتالوج أدناه</string>
+    <string name="food_see">مشاهدة الكل</string>
+    <string name="food_menu">قائمة الطعام اليوم</string>
+    <string name="food_makanan">طعام</string>
+    <string name="food_notes">ملاحظات</string>
+    <string name="food_estimated">التكاليف المقدرة</string>
+    <string name="food_addtocart">اضافة الى السلة</string>
+    <string name="food_booking">تأكيد الطلب</string>
+    <string name="food_itemorder">المنتجات للطلب</string>
+    <string name="food_deliver">أين تريد أن تذهب؟</string>
+    <string name="food_destination">اختر الموقع</string>
+    <string name="food_payment">تفاصيل الدفع</string>
+    <string name="food_cost">متجر الطعام</string>
+    <string name="food_delivery">رسوم التوصيل</string>
+    <string name="food_total">التكلفة الكلية</string>
+    <string name="food_cash">المبلغ المدفوع</string>
+    <string name="food_pay">الدفع ب</string>
+    <string name="food_searchRestaurant">البحث مطاعم</string>
+    <string name="food_minimum3Chars">الحد الأدنى 3 أحرف</string>
+    <string name="food_tryAnotherSearchTerm">لا توجد نتائج ، جرب البحث باسم اخر.</string>
+    <string name="food_noRecordFound">لا توجد سجلات</string>
+    <string name="food_addNotes">ملاحظة للسائق</string>
+    <string name="food_itemsToOrder">تفاصيل طلبك</string>
+    <string name="food_partner">شريك</string>
+    <string name="food_closed">مغلق</string>
+
+    <string name="elektronik_list">قائمة البضائع</string>
+    <string name="elektronik_searchTitle">البحث عن متجر</string>
+    <string name="elektronik_barang">بضائع</string>
+    <string name="elektronik_neardesc">البحث قريبا منك</string>
+
+    <string name="laundry_neardesc">البحث قريبا منك</string>
+    <string name="laundry_list">قائمة التسوق الخاصة بك </string>
+    <string name="food_searchLaundryTitle">البحث عن مغسلة</string>
+    <!--<string name="food_itemsToOrder">ITEMS TO ORDER</string>-->
+</resources>

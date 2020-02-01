@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_laundryhome"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:layout_width="300dp"
+    android:layout_height="210dp">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="250dp">
+
+    <ImageView
+        android:id="@+id/img_laundry"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:background="@drawable/gradient_background"
+        android:alpha="0.7" />
+
+
+        <ImageView
+            android:id="@+id/iabel"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_elaundry"/>
+
+
+
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/laundry_nama"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Jank-Jank Wing Lover"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/iabel"
+            android:layout_below="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/laundry_closed"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textColor="@color/white"
+                android:text="@string/food_closed"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/jarak_r"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="@drawable/bg_closed"/>
+
+            <TextView
+                fontPath="fonts/Poppins-Medium.otf"
+                tools:ignore="MissingPrefix"
+                android:id="@+id/laundry_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:lines="2"
+                android:text="Jalan Soekarno Hatta No. 30, Malang"
+                android:textSize="12sp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/greyText" />
+
+
+            <RelativeLayout
+                android:id="@+id/jarak_r"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp">
+                <ImageView
+                    android:id="@+id/img_jarak"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_jarak" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/img_jarak"
+                    android:id="@+id/laundry_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="2.1 KM "
+                    android:textSize="10sp"
+                    android:textColor="@color/greyText" />
+                <ImageView
+                    android:layout_toRightOf="@+id/laundry_info"
+                    android:id="@+id/img_buka"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_jam_buka" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/img_buka"
+                    android:id="@+id/jam_buka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="2.1 KM "
+                    android:textSize="10sp"
+                    android:textColor="@color/greyText" />
+                <ImageView
+                    android:layout_toRightOf="@+id/jam_buka"
+                    android:id="@+id/img_tutup"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_jam_tutup" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/img_tutup"
+                    android:id="@+id/jam_tutup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="2.1 KM "
+                    android:textSize="10sp"
+                    android:textColor="@color/greyText" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/laundry_mitra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:text="@string/food_partner"
+        android:textSize="12sp"
+        android:padding="4dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/material_green_900"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

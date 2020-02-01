@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu1"
+            android:icon="@drawable/ic_action_home"
+            android:title="Beranda" />
+        <item
+            android:id="@+id/nav_menu2"
+            android:icon="@drawable/ic_action_history"
+            android:title="History" />
+        <item
+            android:id="@+id/nav_menu3"
+            android:icon="@drawable/ic_action_settings"
+            android:title="Pengaturan" />
+
+    </group>
+    <item
+        android:id="@+id/nav_menu4"
+        android:icon="@drawable/ic_action_settings"
+        android:title="Pengaturan" />
+
+
+
+</menu>

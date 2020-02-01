@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@+id/cargo_type_activity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+
+    app:cardElevation="5dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/cargo_selector"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/cargo_image"
+        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_mbox_pickup" />
+
+    <RelativeLayout
+        android:layout_below="@id/cargo_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            fontPath="fonts/Poppins-Medium.otf"
+            tools:ignore="MissingPrefix"
+            android:id="@+id/cargo_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Sedang"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+        <TextView
+
+            fontPath="fonts/Poppins-Light.otf"
+            tools:ignore="MissingPrefix"
+            android:layout_below="@id/cargo_title"
+            android:id="@+id/cargo_dimension"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="1 Orang"
+            android:textColor="@color/grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:visibility="gone"
+
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/cargo_title"
+            android:layout_toRightOf="@id/cargo_dimension"
+            android:id="@+id/cargo_max_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/mbox_maxweight"
+            android:textColor="@color/grey"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

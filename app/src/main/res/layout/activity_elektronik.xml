@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_barang"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueSoft"
+    android:orientation="vertical"
+    tools:context="io.sezon.sezon.mElectronic.ElectronicActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:adjustViewBounds="true"
+            android:background="@color/splash_bg_color"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_back_home_grey"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/mElektronik_title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/home_mElectronic"
+            android:textAllCaps="true"
+            android:textColor="@color/greyText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/electronic_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/orange">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/ic_action_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:text="@string/food_search"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/material_light_white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="158dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/material_light_white">
+
+                <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                    android:id="@+id/slide_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/slide_viewPager_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/electronic_nearme"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:paddingLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/material_light_white">
+
+                <ImageView
+                    android:id="@+id/img_nearme"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_location_pilih_hijau" />
+
+                <TextView
+                    android:id="@+id/text_nearme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_nearme"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/food_near"
+                    android:textSize="16sp"
+                    android:textColor="@color/greyText" />
+
+                <TextView
+                    android:id="@+id/text_neardescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_nearme"
+                    android:layout_below="@+id/text_nearme"
+                    android:layout_centerVertical="true"
+                    android:text="@string/elektronik_neardesc"
+                    android:textSize="12sp"
+                    android:textColor="@color/material_blue_grey_700" />
+
+                <ImageView
+                    android:id="@+id/img_arrownear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/ic_arrow_next_blue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/electronic_explore"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:paddingLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/material_light_white">
+
+                <ImageView
+                    android:id="@+id/img_explore"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_explore_electronic" />
+
+                <TextView
+                    android:id="@+id/text_explore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_explore"
+                    android:layout_centerVertical="true"
+                    android:text="@string/food_explore"
+                    android:textSize="16sp"
+                    android:textColor="@color/greyText" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/text_seeexplore"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toLeftOf="@+id/img_arrowexplore"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="3dp"-->
+                <!--android:text="@string/food_see"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="@color/material_blue_grey_700" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/img_arrowexplore"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:src="@drawable/ic_arrow" />-->
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/kategori_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_light_white">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

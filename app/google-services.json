@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "489962054606",
+    "firebase_url": "https://sharp-respect-251614.firebaseio.com",
+    "project_id": "sharp-respect-251614",
+    "storage_bucket": "sharp-respect-251614.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489962054606:android:d2f4b04f30ef935b",
+        "android_client_info": {
+          "package_name": "io.sezon.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489962054606-pmba87b2u4uvup27bd7n9oh5fd4ebvnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7E0P3S5ObRU4dtOqRm4hfqvYXB6t-3Ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489962054606-pmba87b2u4uvup27bd7n9oh5fd4ebvnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489962054606:android:463d9fe9e1b0c239",
+        "android_client_info": {
+          "package_name": "io.sezon.sezon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489962054606-pmba87b2u4uvup27bd7n9oh5fd4ebvnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7E0P3S5ObRU4dtOqRm4hfqvYXB6t-3Ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489962054606-pmba87b2u4uvup27bd7n9oh5fd4ebvnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

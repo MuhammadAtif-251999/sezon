@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_picklocation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.sezon.sezon.mBox.PickLocation">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:adjustViewBounds="true"
+            android:background="@color/orange"
+            android:scaleType="fitXY" />
+
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/mService_title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/home_mBox"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map_picklocation"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+        <ImageView
+            android:id="@+id/bac"
+            android:layout_width="40dp"
+            android:background="@drawable/bg_cari"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_arrow_back_grey" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_toRightOf="@id/bac"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp">
+
+            <AutoCompleteTextView
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/locationPicker_autoCompleteText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:hint="@string/mart_searchLocation"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:visibility="visible" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <Space
+            android:id="@+id/picklocation_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/picklocation_space"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:id="@+id/mbox_location"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:lines="3"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_cari"
+                android:gravity="center"
+                android:textColor="@color/material_blue_grey_700"
+                android:textSize="10sp" />
+            <TextView
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/mbox_picklocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_add"
+                android:text="@string/mart_useLocation"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_triangle" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

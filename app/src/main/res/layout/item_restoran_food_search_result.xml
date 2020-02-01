@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/restoranFoodSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/restoranFoodSearchResult_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_elaundry"
+                app:riv_corner_radius="10dp" />
+
+            <TextView
+                android:id="@+id/restoranFoodSearchResult_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/restoranFoodSearchResult_icon"
+                android:textSize="15sp"
+                tools:text="Ayam geprek." />
+
+            <TextView
+                android:id="@+id/restoranFoodSearchResult_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/restoranFoodSearchResult_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/restoranFoodSearchResult_icon"
+                android:textSize="9dp"
+                tools:text="Restoran" />
+
+            <TextView
+                android:id="@+id/restoranFoodSearchResult_distance"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restoranFoodSearchResult_icon"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                tools:text="600.00 km" />
+        </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

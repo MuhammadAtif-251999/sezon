@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:background="@color/bg"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+
+            <ImageView
+                android:id="@+id/imghari"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:scaleType="fitXY"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:background="@drawable/gradient_background"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/image_menu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_cari"
+                android:src="@drawable/ic_akun"
+                android:padding="6dp"/>
+        <TextView
+            android:layout_marginTop="70dp"
+            android:textSize="13dp"
+            fontPath="fonts/Poppins-SemiBold.otf"
+            tools:ignore="MissingPrefix"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/ucap"
+            android:text="Selamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@id/ucap"
+                android:textSize="17dp"
+                fontPath="fonts/Poppins-Black.otf"
+                tools:ignore="MissingPrefix"
+                android:gravity="center"
+                android:id="@+id/kamu"
+                android:textColor="@color/black"
+                android:text="What do you want today?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/car4"
+                    android:background="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="11dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            fontPath="fonts/Poppins-SemiBold.otf"
+                            tools:ignore="MissingPrefix"
+                            android:textSize="17sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Balance "/>
+
+                        <TextView
+                            android:layout_toLeftOf="@id/home_mPayBalance"
+                            fontPath="fonts/Poppins-Medium.otf"
+                            tools:ignore="MissingPrefix"
+                            android:textSize="10dp"
+
+                            android:textColor="@color/greyText"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="USD "/>
+
+                        <TextView
+
+                            fontPath="fonts/Poppins-SemiBold.otf"
+                            tools:ignore="MissingPrefix"
+
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:id="@+id/home_mPayBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:text="@string/text_updating"
+                            android:textSize="17sp" />
+                        <LinearLayout
+                            android:id="@+id/garis"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@id/home_mPayBalance"
+                            android:layout_width="match_parent"
+                            android:background="@color/bening"
+                            android:layout_height="1dp"/>
+
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@id/garis"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:background="?attr/selectableItemBackground"
+                                android:id="@+id/home_topUpButton"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="25dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp">
+
+                                <ImageView
+                                    android:layout_centerHorizontal="true"
+                                    android:id="@+id/imdompet"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_dompet"/>
+                                <TextView
+
+                                    fontPath="fonts/Poppins-Medium.otf"
+                                    tools:ignore="MissingPrefix"
+                                    android:layout_below="@id/imdompet"
+                                    android:textColor="@color/greyText"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Wallet"/>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/barcode"
+                                android:background="?attr/selectableItemBackground"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp">
+
+
+                                <TextView
+                                    android:visibility="gone"
+                                    fontPath="fonts/Poppins-Bold.otf"
+                                    tools:ignore="MissingPrefix"
+
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/home_mPayBalance1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:text="@string/text_updating"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:layout_centerHorizontal="true"
+                                    android:id="@+id/impoin"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_payout"/>
+                                <TextView
+                                    fontPath="fonts/Poppins-Medium.otf"
+                                    tools:ignore="MissingPrefix"
+                                    android:textColor="@color/greyText"
+                                    android:layout_below="@id/impoin"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pay Out"/>
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:background="?attr/selectableItemBackground"
+                                android:layout_weight="1"
+                                android:id="@+id/profil"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="25dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp">
+
+
+
+
+                                <ImageView
+                                    android:layout_centerHorizontal="true"
+                                    android:id="@+id/imperson"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_akun_saya"/>
+                                <TextView
+                                    fontPath="fonts/Poppins-Medium.otf"
+                                    tools:ignore="MissingPrefix"
+
+                                    android:textColor="@color/greyText"
+                                    android:layout_below="@id/imperson"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="My Account"/>
+
+                            </RelativeLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_icon_wallet"
+                        android:textColor="@color/white" />
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+
+                fontPath="fonts/Poppins-Bold.otf"
+                tools:ignore="MissingPrefix"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:id="@+id/txte"
+                android:textColor="@color/greyText"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_height="20dp"
+                android:text="Ready to serve you sincerely"/>
+
+            <TextView
+                android:layout_below="@id/txte"
+                fontPath="fonts/Poppins-Regular.otf"
+                tools:ignore="MissingPrefix"
+                android:layout_marginLeft="10dp"
+                android:textSize="10dp"
+                android:textColor="@color/greyText"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Enjoy some of our services"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/home_mRide"
+                android:layout_width="0dp"
+                app:cardElevation="5dp"
+                android:layout_height="100dp"
+                android:layout_weight="0.33"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:background="?attr/selectableItemBackground"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_e_ride_on"
+                    android:layout_above="@+id/textView3"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    fontPath="fonts/Poppins-SemiBold.otf"
+                    tools:ignore="MissingPrefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/home_mRide"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/menu_fontSize"
+                    android:textStyle="bold"
+                    android:id="@+id/textView3"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/home_mSend"
+                android:layout_width="0dp"
+                app:cardElevation="5dp"
+                android:layout_height="100dp"
+                android:layout_weight="0.33"
+                android:clickable="true">
+                <RelativeLayout
+                    android:background="?attr/selectableItemBackground"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView2"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_marginBottom="5dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_esend" />
+
+                <TextView
+
+                    fontPath="fonts/Poppins-SemiBold.otf"
+                    tools:ignore="MissingPrefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/home_mSend"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/menu_fontSize"
+                    android:textStyle="bold"
+                    android:id="@+id/textView2"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/home_mCar"
+                android:layout_width="0dp"
+                app:cardElevation="5dp"
+                android:layout_height="100dp"
+                android:layout_weight="0.33"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/textView6"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="center"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/ic_ecar" />
+
+                    <TextView
+
+                        fontPath="fonts/Poppins-SemiBold.otf"
+                        tools:ignore="MissingPrefix"
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_marginBottom="5dp"
+                        android:maxLines="1"
+
+                        android:text="@string/home_mCar"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/menu_fontSize"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/home_mFood"
+                android:layout_width="0dp"
+                app:cardElevation="5dp"
+                android:layout_height="100dp"
+                android:layout_weight="0.33"
+                android:clickable="true">
+
+            <RelativeLayout
+
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_efood"
+                    android:layout_above="@+id/textView12"
+
+                android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+
+                    fontPath="fonts/Poppins-SemiBold.otf"
+                    tools:ignore="MissingPrefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/home_mFood"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/menu_fontSize"
+                    android:textStyle="bold"
+                    android:id="@+id/textView12"
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/home_mLaundry"
+                android:layout_width="0dp"
+                app:cardElevation="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="100dp"
+                android:layout_weight="0.33"
+                android:clickable="true">
+
+            <RelativeLayout
+                android:background="?attr/selectableItemBackground"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_elaundry"
+                    android:layout_above="@+id/textView18"
+                android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+
+                    fontPath="fonts/Poppins-SemiBold.otf"
+                    tools:ignore="MissingPrefix"
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:maxLines="1"
+                    android:text="@string/home_mLaundry"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/menu_fontSize"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/home_mBox"
+                android:layout_width="0dp"
+                app:cardElevation="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="100dp"
+                android:layout_weight="0.33"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:background="?attr/selectableItemBackground"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_ebox"
+                    android:layout_above="@+id/textView0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+
+                    fontPath="fonts/Poppins-SemiBold.otf"
+                    tools:ignore="MissingPrefix"
+                    android:id="@+id/textView0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:maxLines="1"
+                    android:text="@string/home_mBox"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/menu_fontSize"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/home_mElectronic"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.33"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_melectronic"
+                    android:layout_above="@+id/textView1"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:maxLines="1"
+                    android:text="@string/home_mElectronic"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/menu_fontSize"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mMassage"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.33"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_mmassage"
+                    android:layout_above="@+id/textView4"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/home_mMassage"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/menu_fontSize"
+                    android:textStyle="bold"
+                    android:id="@+id/textView4"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/home_mMart"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.33"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_emart"
+                    android:layout_above="@+id/textView61"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/home_mMart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/menu_fontSize"
+                    android:textStyle="bold"
+                    android:id="@+id/textView61"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/foto12"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_tour"/>
+
+            <TextView
+
+                fontPath="fonts/Poppins-Bold.otf"
+                tools:ignore="MissingPrefix"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/foto12"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/greyText"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_height="20dp"
+                android:text="Ready to take anywhere"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_pohon"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="10dp"
+            android:id="@+id/cargo_type_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <TextView
+            fontPath="fonts/Poppins-Bold.otf"
+            tools:ignore="MissingPrefix"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:id="@+id/dc1"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Today's Restaurant Promotion "/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:elevation="5dp"
+            android:background="@drawable/bgt">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="160dp">
+
+                <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                    android:id="@+id/slide_viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/gradient_background"/>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/slide_viewPager_indicator2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/material_light_white">
+
+
+            <RelativeLayout
+
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    fontPath="fonts/Poppins-Bold.otf"
+                    tools:ignore="MissingPrefix"
+                    android:id="@+id/tr"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/greyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="What menu do you want today...?"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/tr"
+            android:layout_margin="5dp"
+            android:id="@+id/kategori_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/foto3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_efood"/>
+
+            <TextView
+                fontPath="fonts/Poppins-Bold.otf"
+                tools:ignore="MissingPrefix"
+                android:gravity="center"
+                android:layout_marginLeft="9dp"
+                android:textSize="13dp"
+                android:textColor="@color/greyText"
+                android:layout_toRightOf="@+id/foto3"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textStyle="bold"
+                android:text="Today's Shop Promo"/>
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_keyboard_arrow_right_black_48dp"/>
+
+
+
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardCornerRadius="5dp"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/material_light_white">
+
+            <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                android:id="@+id/slide_viewPager1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/slide_viewPager_indicator1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center|bottom" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                fontPath="fonts/Poppins-Bold.otf"
+                tools:ignore="MissingPrefix"
+                android:gravity="center"
+                android:layout_marginLeft="9dp"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:id="@+id/dc"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Shop recommendations for you "/>
+
+
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/dc"
+            android:layout_margin="7dp"
+            android:id="@+id/listLaundry_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        <RelativeLayout
+
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="0dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_peomo" />
+
+
+            <TextView
+                fontPath="fonts/Poppins-Bold.otf"
+                tools:ignore="MissingPrefix"
+                android:gravity="center"
+                android:layout_marginLeft="8dp"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/greyText"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Today's promotion"/>
+
+
+
+
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:cardCornerRadius="5dp"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:background="@color/material_light_white">
+
+            <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                android:id="@+id/slide_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/slide_viewPager_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center|bottom"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

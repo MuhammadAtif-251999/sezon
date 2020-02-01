@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mbox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.sezon.sezon.mBox.BoxActivity">
+
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:adjustViewBounds="true"
+            android:background="@color/orange"
+            android:scaleType="fitXY" />
+
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/gambar"
+        android:layout_width="match_parent"
+        android:src="@drawable/cargo"
+        android:scaleType="center"
+        android:layout_height="180dp" />
+    <ImageView
+        android:layout_width="36dp"
+        android:background="@drawable/bg_cari"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_arrow_back_grey"
+        android:adjustViewBounds="true" />
+
+    <TextView
+        android:id="@+id/mService_title"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/home_mBox"
+        android:layout_marginTop="100dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/material_blue_grey_200" />
+
+    <TextView
+        android:id="@+id/text"
+        android:text="Chose your truck"
+        android:layout_below="@+id/gambar"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/text"
+        android:id="@+id/cargo_type_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</RelativeLayout>

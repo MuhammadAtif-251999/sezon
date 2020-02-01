@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mSend.SendActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/mSend_mapView"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp" />
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:background="@drawable/bgt"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_spasi_jarak"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/mSend_pickUpText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:hint="@string/ride_location"
+                    android:maxLines="2"
+                    android:textSize="9sp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/material_blue_grey_200" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/mSend_destinationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:hint="@string/ride_destination"
+                    android:maxLines="2"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:id="@+id/mSend_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/mSend_pickUpContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mSend_space"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/mSend_pickUpButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_jemput"
+                android:textColor="@color/material_light_white" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_triangle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mSend_destinationContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mSend_space"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/mSend_destinationButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_antar"
+                android:textColor="@color/material_light_white" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_triangle" />
+        </LinearLayout>
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/mSend_selector"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/material_light_white"-->
+        <!--android:clickable="true"-->
+        <!--android:visibility="gone"-->
+        <!--android:paddingBottom="3dp"-->
+        <!--android:paddingLeft="48dp"-->
+        <!--android:paddingRight="48dp"-->
+        <!--android:paddingTop="3dp">-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/mSend_select_car_container"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:clickable="true">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/mSend_select_car"-->
+        <!--android:layout_width="52dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:src="@drawable/icon_mcar_selector" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/mSend_select_car_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/mSend_select_car"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:maxLines="1"-->
+        <!--android:text="@string/home_mCar"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:textColor="@color/text_service_selector"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textStyle="bold" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/mSend_select_ride_container"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:clickable="true">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/mSend_select_ride"-->
+        <!--android:layout_width="52dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:src="@drawable/icon_mride_selector" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/ride_car_select_ride_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/mSend_select_ride"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:maxLines="1"-->
+        <!--android:text="@string/home_mRide"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:textColor="@color/text_service_selector"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textStyle="bold" />-->
+        <!--</RelativeLayout>-->
+
+
+        <!--</RelativeLayout>-->
+
+        <LinearLayout
+            android:elevation="5dp"
+            android:layout_margin="10dp"
+            android:id="@+id/mSend_detail"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/bgt"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50dp">
+
+                <RelativeLayout
+                    android:layout_weight="0.33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/pakai_cash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_pakai_tunai"/>
+
+                        <TextView
+
+                            android:id="@+id/mSend_price"
+                            android:textSize="12dp"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:text="Bayar Tunai"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_weight="0.33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_jarak_tempuh"/>
+                    <TextView
+                        android:textSize="12dp"
+                        android:id="@+id/mSend_distance"
+                        android:gravity="center"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jarak"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/mSend_topUp"
+                    android:layout_weight="0.33"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_persen"/>
+                    <TextView
+                        android:id="@+id/discountText"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dompet"/>
+
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/rideCar_topUp"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_topUp"
+                        android:textColor="@color/material_blue_grey_700" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:id="@+id/mSend_paymentGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/material_light_white"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/mSend_mPayPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="@string/text_mPay"
+                        android:textColor="@color/greyText"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:theme="@style/PaymentButton" />
+
+
+                    <RadioButton
+                        android:id="@+id/mSend_cashPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:checked="true"
+                        android:text="@string/text_cash"
+                        android:textColor="@color/greyText"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:theme="@style/PaymentButton" />
+
+                </RadioGroup>
+
+
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"/>
+
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/mSend_next"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pesan"
+                android:text="@string/text_next"
+                android:textColor="@color/material_light_white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:adjustViewBounds="true"
+            android:background="@color/orange"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/mSend_title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/home_mSend"
+            android:background="@drawable/bg_pesan"
+            android:textAllCaps="true"
+            android:textColor="@color/material_light_white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</LinearLayout>

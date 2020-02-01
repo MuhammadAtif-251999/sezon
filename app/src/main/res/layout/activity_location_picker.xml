@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:adjustViewBounds="true"
+            android:background="@color/orange"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/locationPicker_title"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:text="Lokasi pengantaran"
+            android:textAllCaps="true"
+            android:textColor="@color/greyText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/locationPicker_maps"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:layout_margin="10dp">
+
+            <AutoCompleteTextView
+                android:visibility="visible"
+                android:id="@+id/locationPicker_autoCompleteText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mart_searchLocation"
+                android:maxLines="1"
+                android:textSize="15dp"
+                android:foregroundTint="@color/white"
+                android:backgroundTint="@color/white"
+                android:padding="15dp" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white">-->
+            <!--<fragment-->
+            <!--android:id="@+id/place_autocomplete_fragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/mart_searchLocation"-->
+            <!--android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"-->
+            <!--/>-->
+            <!--</LinearLayout>-->
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:id="@+id/locationPicker_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/locationPicker_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/locationPicker_space"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/locationPicker_currentAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_cari"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:lines="2"
+                    android:textColor="@color/greyText"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/locationPicker_destinationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_add"
+                    android:text="@string/mart_useLocation"
+                    android:textSize="15dp"
+                    android:textColor="@color/greyText" />
+
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_triangle" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

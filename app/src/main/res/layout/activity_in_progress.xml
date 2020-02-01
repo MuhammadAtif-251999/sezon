@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="io.sezon.sezon.mRideCar.InProgressActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:adjustViewBounds="true"
+                android:background="@color/orange"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="@string/home_mRide"
+                android:textAllCaps="true"
+                android:textColor="@color/material_light_white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CheckBox" />
+
+            <fragment
+                android:id="@+id/rideCar_mapView"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/bac"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/bg_cari"
+                android:src="@drawable/ic_arrow_back_grey" />
+
+
+            <Space
+                android:id="@+id/rideCar_space"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true" />
+
+
+            <RelativeLayout
+                android:id="@+id/rideCar_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/material_light_white"
+                android:clickable="true"
+                android:paddingLeft="48dp"
+                android:paddingTop="3dp"
+                android:paddingRight="48dp"
+                android:paddingBottom="3dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rideCar_select_car_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/rideCar_select_car"
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icon_mcar_selector" />
+
+                    <TextView
+                        android:id="@+id/rideCar_select_car_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rideCar_select_car"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:text="@string/home_mCar"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_service_selector"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rideCar_select_ride_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/rideCar_select_ride"
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icon_mride_selector" />
+
+                    <TextView
+                        android:id="@+id/ride_car_select_ride_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rideCar_select_ride"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:text="@string/home_mRide"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_service_selector"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rideCar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_proses"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/re"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/naik"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="100dp"
+                        android:layout_height="20sp"
+                        android:background="@drawable/bg_add"/>
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/driver_image"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/bg_cari"
+                        android:scaleType="centerCrop"
+                        app:riv_border_color="@color/greyText"
+                        app:riv_border_width="2dp"
+                        app:riv_corner_radius="500dp" />
+
+                    <TextView
+
+                        fontPath="fonts/Poppins-Bold.otf"
+                        tools:ignore="MissingPrefix"
+                        android:id="@+id/txt_nama"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_toLeftOf="@+id/komuni"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Name"
+                        android:textSize="20dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/driver_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        fontPath="fonts/Poppins-Medium.otf"
+                        tools:ignore="MissingPrefix"
+                        android:layout_toLeftOf="@+id/komuni"
+                        android:layout_below="@id/txt_nama"
+                        android:layout_marginLeft="110dp"
+                        android:gravity="center"
+                        android:text="Ariana Grande-Butera"
+                        android:textSize="17dp" />
+
+
+
+                    <LinearLayout
+                        android:layout_alignParentRight="true"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:gravity="center"
+                        android:id="@+id/komuni"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/chat_driver"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_chat" />
+
+                        <ImageView
+                            android:id="@+id/call_driver"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_phone"
+                            android:tint="@color/colorPrimary" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/detail_progres"
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+
+                    android:id="@+id/order_number"
+                    fontPath="fonts/Poppins-Medium.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="Order No. 343345344"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    tools:ignore="MissingPrefix" />
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_kembali"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginBottom="250dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/driver_image1"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/pagi"
+                        android:scaleType="centerCrop"
+                        android:elevation="5dp"
+                        app:riv_border_color="@color/white"
+                        app:riv_border_width="5dp"
+                        app:riv_corner_radius="100dp" />
+
+                    <TextView
+                        android:id="@+id/driver_name1"
+                        fontPath="fonts/Poppins-SemiBold.otf"
+                        tools:ignore="MissingPrefix"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:elevation="5dp"
+                        android:textSize="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Muh Arifandi"/>
+
+                    <RatingBar
+                        android:visibility="gone"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView3"
+                        android:layout_centerHorizontal="true"
+                        android:rating="4.7"/>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                fontPath="fonts/Poppins-SemiBold.otf"
+                                tools:ignore="MissingPrefix"
+                                android:layout_marginRight="5dp"
+                                android:text="DT 1234 NH"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+
+                                android:id="@+id/driver_police_number"
+                                android:textColor="@color/white"
+                                android:layout_weight="0.50"
+                                android:gravity="center_horizontal|right"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                fontPath="fonts/Poppins-SemiBold.otf"
+                                tools:ignore="MissingPrefix"
+                                android:layout_marginLeft="5dp"
+                                android:text="Vixion"
+                                android:textSize="20dp"
+                                android:id="@+id/driver_car"
+                                android:textColor="@color/white"
+                                android:gravity="center_horizontal|left"
+                                android:textStyle="bold"
+                                android:layout_weight="0.50"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        fontPath="fonts/Poppins-SemiBold.otf"
+                        tools:ignore="MissingPrefix"
+                        android:text="Taxi"
+                        android:textSize="25dp"
+                        android:gravity="center"
+                        android:id="@+id/rideCar_title"
+                        android:textStyle="bold"
+                        android:layout_weight="0.50"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/bg"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/black"
+                        android:clickable="true"
+                        android:padding="10dp">
+
+                        <TextView
+                            fontPath="fonts/Poppins-Medium.otf"
+                            tools:ignore="MissingPrefix"
+                            android:id="@+id/txtbiaya"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Distance :"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            fontPath="fonts/Poppins-Medium.otf"
+                            tools:ignore="MissingPrefix"
+                            android:id="@+id/rideCar_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/txtbiaya"
+                            android:text="@string/ride_price"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            fontPath="fonts/Poppins-Medium.otf"
+                            tools:ignore="MissingPrefix"
+                            android:id="@+id/txtjarak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@id/rideCar_price"
+                            android:text="Fare :"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            fontPath="fonts/Poppins-Medium.otf"
+                            tools:ignore="MissingPrefix"
+                            android:id="@+id/rideCar_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/ride_cost"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+
+                    <FrameLayout
+
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@color/material_light_white"
+                        android:clickable="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+                                <TextView
+                                    android:visibility="gone"
+                                    android:id="@+id/driver_arriving_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Arriving in 5 mins"
+                                    android:textColor="@color/biruText"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="1.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/grey" />
+
+                            <LinearLayout
+                                android:layout_alignParentRight="true"
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <TextView
+
+                                    fontPath="fonts/Poppins-SemiBold.otf"
+                                    tools:ignore="MissingPrefix"
+                                    android:textStyle="bold"
+                                    android:id="@+id/txt_rate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center"
+                                    android:text="Ranting"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:layout_width="65dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/txt_rate"
+                                    android:layout_alignParentRight="true"
+                                    android:drawableLeft="@drawable/ic_rate2"
+                                    android:drawableTint="@color/orange"
+                                    android:gravity="center"
+                                    android:text="4.7"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"/>
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/material_light_white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40sp"
+                                android:layout_height="40sp"
+                                android:src="@mipmap/ic_loc_jemput" />
+
+                            <EditText
+                                fontPath="fonts/Poppins-Light.otf"
+                                tools:ignore="MissingPrefix"
+                                android:id="@+id/rideCar_pickUpText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:textColor="@color/greyText"
+                                android:text="Perumnas Poasia Blok C No 159, Anduonohu, Poasia, Rahandouna, Poasia, Kota Kendari, Sulawesi Tenggara 93231"
+                                android:hint="@string/ride_location"
+                                android:maxLines="2"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40sp"
+                                android:layout_height="40sp"
+                                android:src="@mipmap/ic_loc_antar" />
+
+
+                            <EditText
+                                fontPath="fonts/Poppins-Light.otf"
+                                tools:ignore="MissingPrefix"
+                                android:id="@+id/rideCar_destinationText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:textColor="@color/greyText"
+                                android:text="Perumnas Poasia Blok C No 159, Anduonohu, Poasia, Rahandouna, Poasia, Kota Kendari, Sulawesi Tenggara 93231"
+                                android:hint="@string/ride_location"
+                                android:maxLines="2"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="5dp"
+                        android:id="@+id/cancelBook"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/merah"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:tint="@color/material_red_accent_400">
+
+
+                        <TextView
+
+                            fontPath="fonts/Poppins-Black.otf"
+                            tools:ignore="MissingPrefix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Cancel Order"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/rideCar_order"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/text_order"
+                        android:textColor="@color/material_light_white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/pop"
+            android:visibility="gone"
+            android:onClick="ShowPopup"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_masuk"
+            android:text="show popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

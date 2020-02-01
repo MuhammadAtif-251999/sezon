@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".home.submenu.TopUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:elevation="5dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_kembali"/>
+                <ImageView
+                    android:id="@+id/image_history"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:tint="@color/black"
+                    android:src="@drawable/ic_wallet"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction History"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:layout_toLeftOf="@id/image_history"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+            <TextView
+                android:id="@+id/sld"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Your balance($.)"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/sld"
+                android:id="@+id/home_mPayBalance"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/text_updating"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/pemilikRekening"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="Account owner"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/material_grey_700"
+                    android:textSize="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/nomorRekening"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="Account number"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/material_grey_700"
+                    android:textSize="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Spinner
+                android:id="@+id/spinBank"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:entries="@array/list_bank"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/material_grey_700"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/other_bank_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/other_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="Nama Bank Lainnya"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/material_grey_700"
+                    android:textSize="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/nominalTransfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="Nominal Transfer"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/material_grey_700"
+                    android:textSize="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/rp20"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.20.00"
+                    android:background="@drawable/bg_uang"/>
+                <TextView
+                    android:layout_toRightOf="@id/rp20"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/rp30"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.30.00"
+                    android:background="@drawable/bg_uang"/>
+                <TextView
+                    android:layout_toRightOf="@id/rp30"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/rp40"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.40.00"
+                    android:background="@drawable/bg_uang"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/rp20"
+                    android:id="@+id/rp50"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.50.00"
+                    android:background="@drawable/bg_uang"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/rp50"
+                    android:layout_below="@id/rp30"
+                    android:id="@+id/r60"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.60.00"
+                    android:background="@drawable/bg_uang"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/r60"
+                    android:layout_below="@id/rp30"
+                    android:id="@+id/rp70"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.70.00"
+                    android:background="@drawable/bg_uang"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/rp50"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/rp80"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.80.00"
+                    android:background="@drawable/bg_uang"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/rp70"
+                    android:id="@+id/rp90"
+                    android:layout_toRightOf="@id/rp80"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.90.00"
+                    android:background="@drawable/bg_uang"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/rp70"
+                    android:id="@+id/rp100"
+                    android:layout_toRightOf="@id/rp90"
+                    android:layout_marginLeft="7dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$.100.00"
+                    android:background="@drawable/bg_uang"/>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:background="@color/merah"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.50"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/butUploadBukti"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:drawableLeft="@drawable/ic_kamera"
+                        android:paddingLeft="10dp"
+                        android:gravity="center"
+                        android:text="PROOF UPLOAD"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/centang"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_checked"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_weight="0.50"
+                    android:background="@color/greyText"
+                    android:id="@+id/butTopup"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="TOP UP"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:adjustViewBounds="true"
+            android:background="@color/orange"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:background="@color/black"
+            android:id="@+id/rideCar_title"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/title_activity_top_up"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/send_help_request"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="@string/text_send"
+        android:textColor="@color/material_light_white"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_laundry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context="io.sezon.sezon.mLaundry.LaundryActivity">
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/laundry_nearme"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/material_light_white">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/img_nearme"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_elaundry" />
+
+        <TextView
+            android:id="@+id/text_nearme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/img_nearme"
+            android:text="Mau belanja apa hari ini?"
+            android:textColor="@color/greyText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_neardescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_nearme"
+            android:layout_below="@+id/text_nearme"
+            android:layout_centerVertical="true"
+            android:text="Satu aplikasi semua kebutuhan anda bisa terpeuhi"
+            android:textSize="12sp"
+            android:textColor="@color/material_blue_grey_700" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/img_arrownear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_arrow" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+            <RelativeLayout
+
+                android:id="@+id/laundry_explore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_light_white">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/img_explore"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_explore_electronic" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:id="@+id/text_explore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_explore"
+                    android:layout_centerVertical="true"
+                    android:text="Pilih toko di bawah ini"
+                    android:textSize="16sp"
+                    android:textColor="@color/greyText" />
+
+                <RelativeLayout
+                    android:id="@+id/ban"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/grocery"/>
+
+
+                    <ImageView
+                        android:id="@+id/bg_nearme"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/grade"/>
+                    <ImageView
+                        android:layout_marginTop="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/nearme_img_resto"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_elaundry"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:id="@+id/mLaundry_title"
+                        android:layout_below="@id/nearme_img_resto"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="@string/home_mLaundry"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/btn_home"
+                        android:layout_width="36dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:adjustViewBounds="true"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_kembali" />
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/laundry_search"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:background="@drawable/bg_cari"
+                    android:drawableRight="@drawable/ic_action_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Search for products here"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listLaundry_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_light_white">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

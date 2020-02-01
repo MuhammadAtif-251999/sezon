@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:text="Bagaimana kami dapat membantu Anda??"
+        android:textStyle="bold"
+        android:textColor="@color/greyText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/help_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        tools:listitem="@layout/item_help" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".barcode.ScanActivity">
+
+
+    <fragment
+        android:id="@+id/barcode_scanner"
+        android:name="info.androidhive.barcode.BarcodeReader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:auto_focus="true"
+        app:use_flash="false" />
+
+
+    <info.androidhive.barcode.ScannerOverlay
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        app:line_color="@color/orange"
+        app:line_speed="10"
+        app:line_width="4"
+        app:square_height="200"
+        app:square_width="200" />
+
+
+    <ImageView
+        android:id="@+id/gn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/orange"/>
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_back_grey"/>
+
+    <TextView
+        android:layout_below="@+id/gn"
+        android:background="@color/bg"
+        android:padding="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="@dimen/dimen_10"
+        android:text="You need to adjust this module to connect to the restaurant cashier "/>
+
+</RelativeLayout>

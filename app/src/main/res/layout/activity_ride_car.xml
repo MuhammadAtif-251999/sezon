@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:adjustViewBounds="true"
+            android:background="@color/orange"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/rideCar_title"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/home_mCar"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/rideCar_mapView"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="5dp"
+            android:elevation="5dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_spasi_jarak"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/rideCar_pickUpText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:hint="@string/ride_location"
+                    android:maxLines="2"
+                    android:textSize="9sp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/material_blue_grey_200" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/rideCar_destinationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:hint="@string/ride_destination"
+                    android:maxLines="2"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <Space
+            android:id="@+id/rideCar_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/rideCar_pickUpContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rideCar_space"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rideCar_pickUpButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_jemput"
+                android:textColor="@color/material_light_white" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_triangle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rideCar_destinationContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rideCar_space"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rideCar_destinationButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_antar"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_triangle" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rideCar_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/material_light_white"
+            android:clickable="true"
+            android:paddingBottom="3dp"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            android:paddingTop="3dp">
+
+            <RelativeLayout
+                android:id="@+id/rideCar_select_car_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/rideCar_select_car"
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon_mcar_selector" />
+
+                <TextView
+                    android:id="@+id/rideCar_select_car_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rideCar_select_car"
+                    android:layout_centerHorizontal="true"
+                    android:maxLines="1"
+                    android:text="@string/home_mCar"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_service_selector"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rideCar_select_ride_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/rideCar_select_ride"
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon_eride_selector" />
+
+                <TextView
+                    android:id="@+id/ride_car_select_ride_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rideCar_select_ride"
+                    android:layout_centerHorizontal="true"
+                    android:maxLines="1"
+                    android:text="@string/home_mRide"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_service_selector"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/deta"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+
+            <LinearLayout
+            android:id="@+id/rideCar_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="8dp">
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true">
+
+
+
+                <RadioGroup
+                    android:visibility="gone"
+                    android:id="@+id/rideCar_paymentGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/material_light_white"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rideCar_mPayPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="@string/text_mPay"
+                        android:textColor="@color/biruText"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:theme="@style/PaymentButton" />
+
+
+                    <RadioButton
+                        android:id="@+id/rideCar_cashPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:checked="true"
+                        android:text="@string/text_cash"
+                        android:textColor="@color/biruText"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:theme="@style/PaymentButton" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="50dp">
+
+                    <RelativeLayout
+                        android:layout_weight="0.33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+
+                            android:visibility="gone"
+                            android:id="@+id/pakai_pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_pakai_pay"/>
+
+                    <TextView
+
+                      android:id="@+id/ova"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content"
+                        android:text="Pakai Ova"
+                        android:textColor="@color/material_blue_grey_700"
+                        android:textSize="12dp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/pakai_cash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_pakai_tunai"/>
+
+                            <TextView
+                                android:textSize="12dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:text="Bayar Tunai"
+                                android:layout_alignParentBottom="true"
+                                android:layout_height="wrap_content" />
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="0.33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_jarak_tempuh"/>
+                   <TextView
+                       android:textSize="12dp"
+                       android:id="@+id/rideCar_distance"
+                       android:gravity="center"
+                       android:layout_alignParentBottom="true"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Jarak"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="0.33"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_dompet"/>
+                        <TextView
+                            android:id="@+id/rideCar_mPayBalance"
+                            android:textSize="12dp"
+                            android:gravity="center"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dompet"/>
+
+                        <Button
+                            android:visibility="gone"
+                            android:id="@+id/rideCar_topUp"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_topUp"
+                            android:textColor="@color/material_blue_grey_700" />
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+                <TextView
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/greyText"
+                    android:text="Payment Metod"/>
+            <LinearLayout
+                android:id="@+id/goru"
+                android:weightSum="1"
+                android:background="@drawable/bg_bayar"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/piliy_pay"
+                    android:paddingBottom="3dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_pilih_pay"
+                    android:layout_weight="0.50"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtdisk"
+                        android:layout_marginTop="9dp"
+                        android:layout_toLeftOf="@id/discountText"
+                        android:textSize="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USD"/>
+                    <TextView
+                        android:layout_marginTop="9dp"
+                        android:id="@+id/discountText"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10k"/>
+                    <TextView
+                        android:textSize="15dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ova"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/piliy_cash"
+                    android:paddingBottom="3dp"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:background="@drawable/bg_pilih_pay"
+                    android:layout_weight="0.50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_toLeftOf="@id/rideCar_price"
+                        android:layout_marginTop="9dp"
+                        android:textSize="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USD"/>
+
+                    <TextView
+
+                        android:id="@+id/rideCar_price"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="9dp"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp"/>
+
+                    <TextView
+
+                        android:textSize="15dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/rideCar_order"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pay"
+                android:text="@string/text_order"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</LinearLayout>

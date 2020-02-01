@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/orange</color>
+    <color name="colorPrimaryDark">@color/grey</color>
+    <color name="colorAccent">@color/directionLine</color>
+    <color name="colorYellow">@color/orange</color>
+
+    <color name="splash_bg_color">#fff424</color>
+    <color name="greyText">#484f59</color>
+    <color name="biruText">#127399</color>
+    <color name="orange">#ffcc00</color>
+    <color name="kun">#8c7103</color>
+    <color name="putih">#f7f7f7</color>
+    <color name="merah">#f50800</color>
+    <color name="hijau">#00f504</color>
+    <color name="ijo">#06cf0a</color>
+    <color name="hijautua">#038e05</color>
+    <color name="bg">#f7f7f7</color>
+    <color name="colorAccentSecondary">#ad1a7f</color>
+    <color name="viewBg">#f8f8f8</color>
+    <color name="btn_disabled">#999</color>
+    <color name="lbl_value">#222222</color>
+
+
+
+    <color name="colorPrimarySoft">#599db8</color>
+    <color name="colorPrimaryBuilding">#0d6485</color>
+
+    <color name="directionLine">#00b3fd</color>
+
+    <color name="blueSoft">#e7f1f5</color>
+    <color name="grey">#999ea0</color>
+    <color name="bening">#bcbebf</color>
+    <color name="bgpay">#d0d9dada</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="brown">#b87e00</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0066da</color>
+    <color name="lightGrey">#f4f4f4</color>
+
+    <color name="blackTransparent">#a0000000</color>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemMFood"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#dcd6d6"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:weightSum="6"
+        android:background="#dcd6d6"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/itemMFood_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="5"
+                android:textSize="18sp"
+                tools:text="Barang blablabla bas"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/catatanFoodDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note : "
+                android:layout_margin="8dp"
+
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qty"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/itemMFood_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical|end"
+                android:layout_gravity="right"
+                android:textSize="18sp"
+                tools:text="9"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+
+
+
+
+
+</LinearLayout>

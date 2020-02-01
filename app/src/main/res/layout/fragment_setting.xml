@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp">
+
+
+                <ImageView
+                    android:id="@+id/imghari"
+                    android:src="@drawable/pagi"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/gradient_background"
+                    android:scaleType="fitXY"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/driver_image"
+                    android:layout_width="90dp"
+                    android:src="@drawable/ic_contact_person"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/bg_cari"
+                    android:scaleType="centerCrop"
+                    app:riv_border_color="@color/greyText"
+                    app:riv_border_width="2dp"
+                    app:riv_corner_radius="500dp" />
+                <TextView
+                    fontPath="fonts/Poppins-Medium.otf"
+                    tools:ignore="MissingPrefix"
+                    android:id="@+id/setting_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="4dp"
+                    android:maxLines="1"
+                    android:textColor="@color/greyText"
+                    android:textSize="20sp"
+                    android:layout_below="@id/driver_image"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    tools:text="@string/setting_nameDummy" />
+                <LinearLayout
+                    android:id="@+id/setting_nameContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    fontPath="fonts/Poppins-Regular.otf"
+                    tools:ignore="MissingPrefix"
+                    android:id="@+id/setting_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/setting_name"
+                    android:layout_centerHorizontal="true"
+                    android:maxLines="1"
+                    android:textColor="@color/greyText"
+                    android:textSize="12sp"
+                    tools:text="@string/setting_emailDummy" />
+
+                <TextView
+
+                    fontPath="fonts/Poppins-Regular.otf"
+                    tools:ignore="MissingPrefix"
+                    android:id="@+id/setting_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/setting_email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="4dp"
+                    android:maxLines="1"
+                    android:textColor="@color/greyText"
+                    android:textSize="12sp"
+                    tools:text="@string/setting_phoneDummy" />
+
+                <Button
+
+                    fontPath="fonts/Poppins-Bold.otf"
+                    tools:ignore="MissingPrefix"
+                    android:id="@+id/setting_editProfile"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/setting_editProfile"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+            <View
+                android:id="@+id/setting_nameSpacer"
+                style="@style/Spacer"
+                android:layout_below="@+id/setting_nameContainer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/setting_changePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_smallIconSize"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_change_password2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="@string/setting_changePassword"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/setting_fontSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/tentang_kami"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_smallIconSize"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_loc_detail" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="@string/tentang_kami"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/setting_fontSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/setting_termOfService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_smallIconSize"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_terms_of_service2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="@string/setting_termOfService"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/setting_fontSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_privacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_smallIconSize"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_privacy_policy2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="@string/setting_privacyPolicy"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/setting_fontSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_smallIconSize"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_faq2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="@string/setting_faq"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/setting_fontSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_rateThisApps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_smallIconSize"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_rate2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="@string/setting_rateApps"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/setting_fontSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/setting_height"
+                    android:layout_weight="0.25" />
+
+                <RelativeLayout
+                    android:id="@+id/setting_logout"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/setting_height"
+                    android:layout_weight="0.5"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_iconSize"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/setting_marginTop"
+                        android:adjustViewBounds="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_logout" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/setting_marginBottom"
+                        android:maxLines="1"
+                        android:text="@string/setting_logout"
+                        android:textColor="@color/merah"
+                        android:textSize="@dimen/setting_fontSize" />
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/setting_height"
+                    android:layout_weight="0.25" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

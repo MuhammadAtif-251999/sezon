@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_booking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context="io.sezon.sezon.mFood.BookingActivity">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@color/black"/>
+
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_kembali"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/mFood_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/food_booking"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_margin="5dp"
+        android:background="@color/bg"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/material_blue_grey_50"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="8dp"
+                    android:text="@string/food_itemsToOrder"
+                    android:textColor="@color/greyText"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                android:id="@+id/food_orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/material_blue_grey_50">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="8dp"
+                    android:text="@string/food_deliver"
+                    android:textColor="@color/greyText"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                android:id="@+id/booking_location"
+                android:background="@drawable/bgt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_loc_antar"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/food_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:text="@string/food_destination"
+                    android:textSize="16sp"
+                    android:drawableTint="@color/greyText"
+
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_margin="5dp"
+                android:background="@drawable/bgt"
+                android:id="@+id/food_addNotes"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:drawableLeft="@drawable/ic_loc_detail"
+                android:paddingLeft="12dp"
+                android:layout_marginRight="8dp"
+                android:textSize="15sp"
+                android:hint="@string/food_addNotes"/>
+
+            <LinearLayout
+
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/material_blue_grey_50">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:text="@string/food_payment"
+                    android:textColor="@color/greyText"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bgt"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:drawableLeft="@drawable/ic_mfood_cost"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="@string/food_cost"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/food_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Rp. 23,400"
+                    android:textSize="16sp"
+                    android:textColor="@color/material_blue_grey_700" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/bgt"
+                android:weightSum="1"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="@string/food_delivery"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/ic_mfood_cost" />
+
+                <TextView
+                    android:id="@+id/delivery_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Rp. 23,400"
+                    android:textSize="16sp"
+                    android:textColor="@color/material_blue_grey_700" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:background="@drawable/bgt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="35dp"
+                    android:text="@string/food_total"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/value_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Rp. 23,400"
+                    android:textSize="16sp"
+                    android:textColor="@color/material_blue_grey_700" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:weightSum="1"
+                android:elevation="3dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_closed"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="@string/food_cash"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/ic_mfood_cost" />
+
+                <TextView
+                    android:id="@+id/food_cash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Rp. 23,400"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_margin="5dp"
+                android:elevation="3dp"
+                android:id="@+id/food_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/service_order"
+                android:background="@drawable/bgt"
+                android:clickable="true">
+
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/p1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:layout_weight="0.33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/img_diskon"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_persen"/>
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:gravity="center"
+                            android:layout_below="@+id/img_diskon"
+                            android:id="@+id/mpay_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="text"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_weight="0.33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/img_harga"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_pakai_tunai"/>
+
+                        <TextView
+                            android:id="@+id/food_cash1"
+                            android:textSize="12dp"
+                            android:gravity="center"
+                            android:layout_below="@+id/img_harga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="text"/>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+
+                        android:layout_weight="0.33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/mpay_topup"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_dompet"/>
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:gravity="center"
+                            android:layout_below="@+id/mpay_topup"
+                            android:id="@+id/mpay_balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="text"/>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <TextView
+
+                    android:layout_below="@+id/p1"
+                    android:id="@+id/paywit"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/greyText"
+                    android:text="Payment Metod"/>
+                    <RadioGroup
+                        android:layout_below="@+id/p1"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_bayar"
+                        android:weightSum="1"
+                        android:layout_margin="5dp"
+                        android:id="@+id/service_paymentgroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:layout_weight="0.50"
+                            android:button="@color/transparent"
+                            android:background="@drawable/bg_pilih_pay"
+                            android:id="@+id/radio_mpay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="@string/text_mPay"
+                            android:textColor="@color/greyText"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:theme="@style/PaymentButton" />
+
+
+                        <RadioButton
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:layout_weight="0.50"
+                            android:button="@color/transparent"
+                            android:background="@drawable/bg_pilih_pay"
+                            android:id="@+id/radio_cash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="@string/text_cash"
+                            android:textColor="@color/greyText"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:theme="@style/PaymentButton"
+                            android:checked="true" />
+
+                    </RadioGroup>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:elevation="5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_pay"
+        android:text="@string/text_order"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:clickable="false" />
+
+</RelativeLayout>

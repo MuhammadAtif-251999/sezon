@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_laundry_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context="io.sezon.sezon.mLaundry.LaundryMenuActivity">
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/laundryMenu_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/black"
+            android:scaleType="fitXY" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_below="@+id/laundryMenu_header"
+        android:id="@+id/foodMenu_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/laundry_explore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_light_white">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/img_explore"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_explore_electronic" />
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/text_explore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_explore"
+            android:layout_centerVertical="true"
+            android:text="Pilih toko di bawah ini"
+            android:textSize="16sp"
+            android:textColor="@color/greyText" />
+
+        <RelativeLayout
+            android:id="@+id/ban"
+
+            android:layout_width="match_parent"
+            android:layout_height="210dp">
+            <ImageView
+                android:src="@drawable/bg_uang"
+                android:id="@+id/laundry_foto"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+
+            <ImageView
+                android:id="@+id/bg_nearme"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@drawable/gradient_background"
+                android:alpha="0.7" />
+            <TextView
+                android:id="@+id/laundry_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_above="@+id/jarak_r"
+                android:layout_marginBottom="5dp"
+                android:text="Jalan Soekarno Hatta No. 30, Malang"
+                android:textColor="@color/material_light_white"
+                android:textSize="12sp" />
+            <RelativeLayout
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/jarak_r"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="15dp">
+                <ImageView
+                    android:id="@+id/img_jarak"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_jarak" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/img_jarak"
+                    android:id="@+id/laundry_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="2.1 KM "
+                    android:textSize="10sp"
+                    android:textColor="@color/white" />
+                <ImageView
+                    android:layout_toRightOf="@+id/laundry_info"
+                    android:id="@+id/img_buka"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_buka_menu" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/img_buka"
+                    android:id="@+id/jam_buka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="2.1 KM "
+                    android:textSize="10sp"
+                    android:textColor="@color/white" />
+                <ImageView
+                    android:layout_toRightOf="@+id/jam_buka"
+                    android:id="@+id/img_tutup"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_jam_tutup" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/img_tutup"
+                    android:id="@+id/jam_tutup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="2.1 KM "
+                    android:textSize="10sp"
+                    android:textColor="@color/white" />
+                <ImageView
+                    android:layout_toRightOf="@+id/jam_tutup"
+                    android:id="@+id/img_telepon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_telepon" />
+                <TextView
+                    android:id="@+id/telepon"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/img_telepon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="2.1 KM "
+                    android:textSize="10sp"
+                    android:textColor="@color/white" />
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/nearme_img_resto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_restoran"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/laundry_title"
+                android:layout_below="@id/nearme_img_resto"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="@string/home_mFood"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_home"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_arrow_back_grey" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_above="@id/estimasiHarga_bottom"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ban"
+            android:id="@+id/layanan_laundry_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_mfood_cost" />
+
+            <TextView
+                android:layout_marginLeft="19sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_closed"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/estimasiHarga_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:padding="8dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/cost_icon"
+                android:layout_marginRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_keranjang_2" />
+
+            <TextView
+                android:id="@+id/qty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/jml"
+                android:layout_toRightOf="@id/qty_text"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Items"/>
+
+            <View
+                android:id="@+id/cost_line"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/jml"
+                android:background="@color/material_blue_grey_200" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/estimated_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/cost_line"
+                android:text="@string/food_estimated"
+                android:textColor="@color/material_blue_grey_700"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cost_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/cost_line"
+                android:text="Rp. 23500"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/mfood_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_arrow"
+                android:backgroundTint="@color/white" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

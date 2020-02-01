@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/gambar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/morning" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/grade"/>
+
+
+
+    <TextView
+        fontPath="fonts/Poppins-Bold.otf"
+        tools:ignore="MissingPrefix"
+        android:id="@+id/text_ucap"
+        android:textSize="25sp"
+
+        android:gravity="center"
+        android:elevation="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Good Afternon"/>
+
+    <TextView
+        fontPath="fonts/Poppins-SemiBold.otf"
+        tools:ignore="MissingPrefix"
+        android:gravity="center"
+        android:layout_below="@+id/text_ucap"
+        android:id="@+id/jam"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="ss"
+        android:textSize="15dp"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_below="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/signUp_lastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawableTint="@color/greyText"
+                    android:hint="@string/hint_lastName"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/signUp_email"
+                    android:textColor="@color/greyText"
+                    android:textColorHint="@color/greyText"
+                    android:theme="@style/SignInSignUpEditText" />
+
+            </LinearLayout>
+
+            <EditText
+                android:background="@drawable/editex"
+                android:padding="5dp"
+                android:textSize="17dp"
+                android:id="@+id/signUp_firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawableTint="@color/greyText"
+                android:hint="@string/hint_firstName"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/signUp_email"
+                android:textColor="@color/greyText"
+                android:textColorHint="@color/greyText"
+                android:theme="@style/SignInSignUpEditText" />
+
+            <EditText
+                android:background="@drawable/editex"
+                android:padding="5dp"
+                android:textSize="17dp"
+                android:id="@+id/signUp_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawableTint="@color/greyText"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/signUn_password"
+                android:textColor="@color/greyText"
+                android:textColorHint="@color/greyText"
+                android:theme="@style/SignInSignUpEditText" />
+
+
+
+                <EditText
+                    android:textSize="17dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/editex"
+                    android:padding="5dp"
+                    android:id="@+id/signUp_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:drawableTint="@color/greyText"
+                    android:nextFocusDown="@+id/signUp_phone"
+                    android:textColor="@color/greyText"
+                    android:textColorHint="@color/greyText"/>
+
+            <EditText
+                android:background="@drawable/editex"
+                android:padding="5dp"
+                android:id="@+id/signUp_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawableTint="@color/greyText"
+                android:hint="@string/hint_phoneNumber"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/signUp_address"
+                android:textColor="@color/greyText"
+                android:textColorHint="@color/greyText"
+                android:theme="@style/SignInSignUpEditText" />
+
+            <EditText
+                android:background="@drawable/editex"
+                android:padding="5dp"
+                android:id="@+id/signUp_address"
+                android:layout_width="match_parent"
+                android:textSize="17dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_address"
+                android:drawableTint="@color/greyText"
+                android:hint="@string/hint_address"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/signUp_pob"
+                android:textColor="@color/greyText"
+                android:textColorHint="@color/greyText"
+                android:theme="@style/SignInSignUpEditText" />
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/signUp_pob"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:drawableLeft="@drawable/ic_pob"-->
+                    <!--android:hint="@string/hint_pob"-->
+                    <!--android:inputType="text"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:nextFocusDown="@+id/signUp_dob"-->
+                    <!--android:textColor="@color/material_light_white"-->
+                    <!--android:textColorHint="@color/material_light_white"-->
+                    <!--android:theme="@style/SignInSignUpEditText" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/signUp_dob"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0.50"-->
+                    <!--android:drawableLeft="@drawable/ic_dob"-->
+                    <!--android:hint="@string/hint_dob"-->
+                    <!--android:inputType="text"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:textColor="@color/material_light_white"-->
+                    <!--android:textColorHint="@color/material_light_white"-->
+                    <!--android:theme="@style/SignInSignUpEditText" />-->
+
+            <!--</LinearLayout>-->
+
+            <Button
+                android:background="@drawable/btn_masuk"
+                android:id="@+id/signUp_signUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/button_signUp"
+                android:textSize="20dp"
+                android:textColor="@color/material_light_white"
+                android:theme="@style/SignInButton"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/signUp_signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <TextView
+            fontPath="fonts/Poppins-Medium.otf"
+            tools:ignore="MissingPrefix"
+            android:gravity="center"
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/button_haveAccount"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
+
+        <TextView
+            fontPath="fonts/Poppins-SemiBold.otf"
+            tools:ignore="MissingPrefix"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/button_signIn"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "637063766689",
+    "firebase_url": "https://sezon-app-d96d6.firebaseio.com",
+    "project_id": "sezon-app-d96d6",
+    "storage_bucket": "sezon-app-d96d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637063766689:android:463d9fe9e1b0c239",
+        "android_client_info": {
+          "package_name": "io.sezon.sezon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637063766689-pv8r41vj4ckcv8moa1nesptveitdfav5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.sezon.sezon",
+            "certificate_hash": "f611c00215254de9f233a3112c1ffe8d3637debe"
+          }
+        },
+        {
+          "client_id": "637063766689-dtab65kthc7ut1j66puejmshqbm0vrnt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEd84qBjXNPZxPAHKT0fRzjBAQPSzDtg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637063766689-dtab65kthc7ut1j66puejmshqbm0vrnt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

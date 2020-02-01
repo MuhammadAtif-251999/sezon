@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_bg_color"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/waiting_tipeLayanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="JASA ANTAR JEMPUT"
+        android:textAllCaps="false"
+        android:textColor="@color/material_light_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/orange"
+        />
+
+    <CheckBox
+        android:visibility="gone"
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="96dp"
+            android:adjustViewBounds="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:adjustViewBounds="true"
+            android:id="@+id/imageView4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:alpha="0.0"
+            android:background="@color/colorPrimaryBuilding" />
+
+        <Space
+            android:id="@+id/waiting_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/waiting_logo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/sa" />
+
+        <TextView
+            android:id="@+id/waiting_pleaseWait"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/waiting_space"
+            android:layout_centerHorizontal="true"
+            android:text="@string/waiting_pleaseWait"
+            android:textAllCaps="true"
+            android:textColor="@color/greyText"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/waiting_pleaseWait"
+            android:layout_centerHorizontal="true"
+            android:text="@string/waiting_desc"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/waiting_pleaseWait"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+        <Button
+            android:id="@+id/waiting_cancel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/merah"
+            android:text="@string/text_cancel"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageView4"
+            android:layout_toEndOf="@+id/imageView4" />
+
+    </RelativeLayout>
+
+</LinearLayout>
