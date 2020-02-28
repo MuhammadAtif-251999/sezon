@@ -13,326 +13,265 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
-<!--    <uses-permission android:name="android.permission.CAMERA" />-->
 
     <application
-        android:name="io.sezon.sezon.MangJekApplication"
+        android:name=".MangJekApplication"
         android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
-        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         tools:replace="android:appComponentFactory">
-<!--        tools:ignore="GoogleAppIndexingWarning"-->
-
+        <activity android:name=".signUp.OTPActivity"></activity>
+        <activity android:name=".intro.Introactivity" /> <!-- tools:ignore="GoogleAppIndexingWarning" -->
         <activity
-            android:name="io.sezon.sezon.splash.SplashActivity"
+            android:name=".splash.SplashActivity"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="io.sezon.sezon.signIn.SignInActivity"
+            android:name=".signIn.SignInActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.home.MainActivity"
+            android:name=".home.MainActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.signUp.SignUpActivity"
+            android:name=".signUp.SignUpActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mRideCar.RideCarActivity"
+            android:name=".mRideCar.RideCarActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mRideCar.WaitingActivity"
+            android:name=".mRideCar.WaitingActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mMart.MartActivity"
+            android:name=".mMart.MartActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mMart.LocationPickerActivity"
+            android:name=".mMart.LocationPickerActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mMart.MartWaitingActivity"
+            android:name=".mMart.MartWaitingActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mSend.SendWaitingActivity"
+            android:name=".mSend.SendWaitingActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mBox.BoxActivity"
+            android:name=".mBox.BoxActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mBox.BoxOrder"
+            android:name=".mBox.BoxOrder"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mBox.BoxDetailOrder"
+            android:name=".mBox.BoxDetailOrder"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mBox.MboxWaiting"
+            android:name=".mBox.MboxWaiting"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mBox.PickLocation"
+            android:name=".mBox.PickLocation"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mService.mServiceActivity"
+            android:name=".mService.mServiceActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-
         <activity
-            android:name="io.sezon.sezon.mService.mServiceBook"
+            android:name=".mService.mServiceBook"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mService.mServiceWaiting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mService.mServiceProgress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mMassage.MassageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mMassage.LocationPickerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mMassage.WaitingMassageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.submenu.history.details.MSendDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.submenu.history.details.MMartDetailActivity"
             android:screenOrientation="portrait" />
 
-        <activity
-            android:name="io.sezon.sezon.mService.mServiceWaiting"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="io.sezon.sezon.mService.mServiceProgress"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="io.sezon.sezon.mMassage.MassageActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="io.sezon.sezon.mMassage.LocationPickerActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="io.sezon.sezon.mMassage.WaitingMassageActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="io.sezon.sezon.home.submenu.history.details.MSendDetailActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="io.sezon.sezon.home.submenu.history.details.MMartDetailActivity"
-            android:screenOrientation="portrait" />
-
-        <service android:name="io.sezon.sezon.service.MangJekMessagingService">
+        <service android:name=".service.MangJekMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service>
-
-<!--        <service android:name="io.sezon.sezon.service.MangJekInstanceIdService">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
-<!--            </intent-filter>-->
-<!--        </service>-->
-
-        <service android:name="io.sezon.sezon.mMassage.service.SendRequestMassageService" />
+        </service> <!-- <service android:name="io.sezon.sezon.service.MangJekInstanceIdService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <service android:name=".mMassage.service.SendRequestMassageService" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="io.sezon.sezon.mRideCar.InProgressActivity"
+            android:name=".mRideCar.InProgressActivity"
             android:label="@string/title_activity_in_progress"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.mRideCar.RateDriverActivity"
+            android:name=".mRideCar.RateDriverActivity"
             android:label="@string/title_activity_rate_driver"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.help.HelpActivity"
+            android:name=".home.submenu.help.HelpActivity"
             android:label="@string/title_activity_help"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.ChatActivity"
+            android:name=".home.ChatActivity"
             android:label="@string/title_activity_chat"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.setting.UpdateProfileActivity"
+            android:name=".home.submenu.setting.UpdateProfileActivity"
             android:label="@string/title_activity_update_profile"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.setting.ChangePasswordActivity"
+            android:name=".home.submenu.setting.ChangePasswordActivity"
             android:label="@string/title_activity_change_password"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.setting.TermOfServiceActivity"
+            android:name=".home.submenu.setting.TermOfServiceActivity"
             android:label="@string/title_activity_term_of_service"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.setting.PrivacyPolicyActivity"
+            android:name=".home.submenu.setting.PrivacyPolicyActivity"
             android:label="@string/title_activity_privacy_policy"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.setting.FAQActivity"
+            android:name=".home.submenu.setting.FAQActivity"
             android:label="@string/title_activity_faq"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.TopUpActivity"
+            android:name=".home.submenu.TopUpActivity"
             android:label="@string/title_activity_top_up"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.history.HistoryDetailActivity"
+            android:name=".home.submenu.history.HistoryDetailActivity"
             android:label="@string/title_activity_history_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.mSend.SendActivity"
+            android:name=".mSend.SendActivity"
             android:label="@string/title_activity_send"
-            android:parentActivityName="io.sezon.sezon.home.MainActivity"
+            android:parentActivityName=".home.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.sezon.sezon.home.MainActivity" />
         </activity>
-
         <activity
-            android:name="io.sezon.sezon.barcode.ScanActivity"
+            android:name=".barcode.ScanActivity"
             android:label="@string/title_activity_top_up"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.mSend.AddDetailSendActivity"
+            android:name=".mSend.AddDetailSendActivity"
             android:label="@string/title_activity_add_detail_send"
-            android:parentActivityName="io.sezon.sezon.mSend.SendActivity"
+            android:parentActivityName=".mSend.SendActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="io.sezon.sezon.mMassage.InProgressFinishedMassageActivity"
+            android:name=".mMassage.InProgressFinishedMassageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.history.details.MFoodDetailActivity"
+            android:name=".home.submenu.history.details.MFoodDetailActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.history.details.MElectronicDetailActivity"
+            android:name=".home.submenu.history.details.MElectronicDetailActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.history.details.MLaundryDetailActivity"
+            android:name=".home.submenu.history.details.MLaundryDetailActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.home.submenu.history.details.MFoodDetailStrukActivity"
+            android:name=".home.submenu.history.details.MFoodDetailStrukActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.FoodActivity"
+            android:name=".mFood.FoodActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.NearmeActivity"
+            android:name=".mFood.NearmeActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.FoodMenuActivity"
+            android:name=".mFood.FoodMenuActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.MakananActivity"
+            android:name=".mFood.MakananActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.BookingActivity"
+            android:name=".mFood.BookingActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.SearchRestoranActivity"
+            android:name=".mFood.SearchRestoranActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.KategoriSelectActivity"
+            android:name=".mFood.KategoriSelectActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.LocationPickerActivity"
+            android:name=".mFood.LocationPickerActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mFood.FoodWaitingActivity"
+            android:name=".mFood.FoodWaitingActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mLaundry.LaundryActivity"
+            android:name=".mLaundry.LaundryActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mLaundry.BookingLaundryActivity"
+            android:name=".mLaundry.BookingLaundryActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mLaundry.LaundryMenuActivity"
+            android:name=".mLaundry.LaundryMenuActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mLaundry.LaundryWaitingActivity"
+            android:name=".mLaundry.LaundryWaitingActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mLaundry.LocationPickerLaundryActivity"
+            android:name=".mLaundry.LocationPickerLaundryActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mLaundry.NearmeLaundryActivity"
+            android:name=".mLaundry.NearmeLaundryActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.mLaundry.SearchLaundryActivity"
+            android:name=".mLaundry.SearchLaundryActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="io.sezon.sezon.barcode.TicketResultActivity"
-            android:theme="@style/AppTheme.AppBarOverlay"
-            android:screenOrientation="portrait"/>
+            android:name=".barcode.TicketResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.AppBarOverlay" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -343,7 +282,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-
     </application>
 
 </manifest>

@@ -218,8 +218,9 @@ public class SignUpActivity extends DialogActivity implements Validator.Validati
         request.setNamaBelakang(textLastName.getText().toString());
         request.setEmail(textEmail.getText().toString());
         request.setPassword(textPassword.getText().toString());
-        request.setNoTelepon(textPhone.getText().toString());
+        request.setNoTelepon("249"+textPhone.getText().toString());
         request.setAlamat(textAddress.getText().toString());
+        request.setOtp("0");
 //        request.setTempatLahir(textPlaceOfBirth.getText().toString());
 //        request.setTglLahir(textDateOfBirth.getText().toString());
 
@@ -242,7 +243,7 @@ public class SignUpActivity extends DialogActivity implements Validator.Validati
                         setResult(Activity.RESULT_OK, retIntent);
                         finish();
                     } else {
-                        Toast.makeText(SignUpActivity.this, "Register gagal", Toast.LENGTH_LONG).show();
+                        Toast.makeText(SignUpActivity.this, "user exist", Toast.LENGTH_LONG).show();
                     }
                 } else {
                     Toast.makeText(SignUpActivity.this, "System error", Toast.LENGTH_LONG).show();

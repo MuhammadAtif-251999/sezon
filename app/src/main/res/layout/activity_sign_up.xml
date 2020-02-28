@@ -150,23 +150,43 @@
                     android:textColor="@color/greyText"
                     android:textColorHint="@color/greyText"/>
 
-            <EditText
-                android:background="@drawable/editex"
-                android:padding="5dp"
-                android:id="@+id/signUp_phone"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="17dp"
+                android:orientation="horizontal"
+                android:background="@drawable/editex"
                 android:layout_marginTop="8dp"
-                android:drawableLeft="@drawable/ic_phone"
-                android:drawableTint="@color/greyText"
-                android:hint="@string/hint_phoneNumber"
-                android:inputType="phone"
-                android:maxLines="1"
-                android:nextFocusDown="@+id/signUp_address"
-                android:textColor="@color/greyText"
-                android:textColorHint="@color/greyText"
-                android:theme="@style/SignInSignUpEditText" />
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:text="249"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawableTint="@color/greyText"
+                    android:textColor="@color/black"/>
+
+
+                <EditText
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:id="@+id/signUp_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:hint="@string/hint_phoneNumber"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:maxLength="9"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:nextFocusDown="@+id/signUp_address"
+                    android:textColor="@color/greyText"
+                    android:textColorHint="@color/greyText"
+                    android:theme="@style/SignInSignUpEditText" />
+            </LinearLayout>
+
 
             <EditText
                 android:background="@drawable/editex"

@@ -20,6 +20,7 @@ import io.sezon.sezon.R;
 import io.sezon.sezon.api.ServiceGenerator;
 import io.sezon.sezon.api.service.UserService;
 import io.sezon.sezon.home.MainActivity;
+import io.sezon.sezon.intro.Introactivity;
 import io.sezon.sezon.model.User;
 import io.sezon.sezon.model.json.menu.VersionRequestJson;
 import io.sezon.sezon.model.json.menu.VersionResponseJson;
@@ -202,7 +203,7 @@ public class SplashActivity extends AppCompatActivity {
             intent = new Intent(SplashActivity.this, MainActivity.class);
 
         } else {
-            intent = new Intent(SplashActivity.this, SignInActivity.class);
+            intent = new Intent(SplashActivity.this, Introactivity.class);
         }
         startActivity(intent);
             }

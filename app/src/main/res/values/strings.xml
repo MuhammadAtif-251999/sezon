@@ -13,8 +13,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
 
-
-
     <string name="title_activity_ticket">Book Ticket</string>
     <string name="lbl_duration">DURATION</string>
     <string name="lbl_genre">GENRE</string>
@@ -299,5 +297,8 @@
     <string name="laundry_neardesc">Look around you</string>
     <string name="laundry_list">Your shopping list </string>
     <string name="food_searchLaundryTitle">Search Laundry</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="resendotp">Resend OTP ?</string>
+    <string name="enterotp">Enter the OTP we just sent you</string>
     <!--<string name="food_itemsToOrder">ITEMS TO ORDER</string>-->
 </resources>

@@ -713,7 +713,8 @@ public class InProgressActivity extends AppCompatActivity
                 || fitur.equalsIgnoreCase("Food")) {
             iconRes = R.drawable.ic_m_ride_pin;
             Log.e("lokasi tidak ditemkan", "saas");
-        } else if (fitur.equalsIgnoreCase("Taxi")) {
+        } else if (fitur.equals("2")) {
+            //pela "2" ni jagya e "Taxi" hatu but server mathi 2 etle taxi ave che by Nitin
             iconRes = R.drawable.ic_m_car_pin;
             Log.e("lokasi tidak ditemkan", "saas");
         } else if (fitur.equalsIgnoreCase("Pijat")) {

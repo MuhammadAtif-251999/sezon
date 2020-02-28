@@ -299,5 +299,8 @@
     <string name="laundry_neardesc">البحث قريبا منك</string>
     <string name="laundry_list">قائمة التسوق الخاصة بك </string>
     <string name="food_searchLaundryTitle">البحث عن مغسلة</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="resendotp">Resend OTP ?</string>
+    <string name="enterotp">Enter the OTP we just sent you</string>
     <!--<string name="food_itemsToOrder">ITEMS TO ORDER</string>-->
 </resources>

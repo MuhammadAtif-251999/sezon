@@ -18,6 +18,7 @@ import com.mobsandgeeks.saripaar.Validator;
 import com.mobsandgeeks.saripaar.annotation.Email;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 
+import io.sezon.sezon.signUp.OTPActivity;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 import io.sezon.sezon.MangJekApplication;
 import io.sezon.sezon.R;
@@ -85,6 +86,8 @@ public class SignInActivity extends DialogActivity implements Validator.Validati
 
 
     Validator validator;
+
+    User user;
 
     @Override
     protected void onStart() {
@@ -180,13 +183,23 @@ public class SignInActivity extends DialogActivity implements Validator.Validati
                 hideProgressDialog();
                 if (response.isSuccessful()) {
                     if (response.body().getMessage().equalsIgnoreCase("found")) {
-                        User user = response.body().getData().get(0);
 
-                        saveUser(user);
+                        user = response.body().getData().get(0);
+                        if(user.getVstatus().equals("1"))//OTP Verification Done
+                        {
+                            saveUser(user);
+                            Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        else
+                        {
+                            //Start OTP Verification Screen Here
+                            Intent intent = new Intent(SignInActivity.this, OTPActivity.class);
+                            intent.putExtra("user_data", response.body().getData().get(0));
+                            startActivityForResult(intent, SignUpActivity.SIGNUP_ID);
+                        }
 
-                        Intent intent = new Intent(SignInActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
                     } else {
                         Toast.makeText(SignInActivity.this, "Username atau Password salah", Toast.LENGTH_SHORT).show();
                     }
@@ -207,13 +220,21 @@ public class SignInActivity extends DialogActivity implements Validator.Validati
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == SignUpActivity.SIGNUP_ID) {
             if (resultCode == Activity.RESULT_OK) {
-                User user = (User) data.getSerializableExtra(SignUpActivity.USER_KEY);
+                user = (User) data.getSerializableExtra(SignUpActivity.USER_KEY);
 
-                saveUser(user);
+                if(user.getVstatus().equals("1")) { //OTP Verification Done
+                    saveUser(user);
 
-                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else
+                {
+                    Intent intent = new Intent(SignInActivity.this, OTPActivity.class);
+                    intent.putExtra("user_data", user);
+                    startActivityForResult(intent, SignUpActivity.SIGNUP_ID);
+                }
             }
         }
     }

@@ -67,6 +67,10 @@ public class User extends RealmObject implements Serializable {
     @Expose
     private String status;
 
+    @SerializedName("vstatus")
+    @Expose
+    private String vstatus;
+
     private long mPaySaldo;
 
     public String getId() {
@@ -179,5 +183,13 @@ public class User extends RealmObject implements Serializable {
 
     public void setmPaySaldo(long mPaySaldo) {
         this.mPaySaldo = mPaySaldo;
+    }
+
+    public String getVstatus() {
+        return vstatus;
+    }
+
+    public void setVstatus(String vstatus) {
+        this.vstatus = vstatus;
     }
 }

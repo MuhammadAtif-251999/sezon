@@ -18,6 +18,7 @@ import io.sezon.sezon.model.json.user.GetSaldoRequestJson;
 import io.sezon.sezon.model.json.user.GetSaldoResponseJson;
 import io.sezon.sezon.model.json.user.LoginRequestJson;
 import io.sezon.sezon.model.json.user.LoginResponseJson;
+import io.sezon.sezon.model.json.user.OTPRequestJson;
 import io.sezon.sezon.model.json.user.RegisterRequestJson;
 import io.sezon.sezon.model.json.user.RegisterResponseJson;
 import io.sezon.sezon.model.json.user.TopupRequestJson;
@@ -25,8 +26,11 @@ import io.sezon.sezon.model.json.user.TopupResponseJson;
 import io.sezon.sezon.model.json.user.UpdateProfileRequestJson;
 import io.sezon.sezon.model.json.user.UpdateProfileResponseJson;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
@@ -78,6 +82,7 @@ public interface UserService {
     @GET("pelanggan/banner_promosi")
     Call<GetBannerResponseJson> getBanner();
 
-
+    @POST("pelanggan/verify_otp")
+    Call<ResponseBody>verifyOTP(@Body OTPRequestJson param);
 
 }

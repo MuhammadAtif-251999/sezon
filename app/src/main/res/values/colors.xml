@@ -41,4 +41,19 @@
     <color name="lightGrey">#f4f4f4</color>
 
     <color name="blackTransparent">#a0000000</color>
+
+    <array name="array_dot_active">
+        <item>#629BA3</item>
+        <item>#629BA3</item>
+        <item>#629BA3</item>
+        <item>#629BA3</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>#B9BCBD</item>
+        <item>#B9BCBD</item>
+        <item>#B9BCBD</item>
+        <item>#B9BCBD</item>
+    </array>
+
 </resources>

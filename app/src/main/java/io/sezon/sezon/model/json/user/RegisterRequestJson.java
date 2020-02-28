@@ -45,6 +45,10 @@ public class RegisterRequestJson {
     @Expose
     private String regId;
 
+    @SerializedName("otp")
+    @Expose
+    private String otp;
+
     public String getNamaDepan() {
         return namaDepan;
     }
@@ -115,5 +119,13 @@ public class RegisterRequestJson {
 
     public void setRegId(String regId) {
         this.regId = regId;
+    }
+
+    public String getOtp() {
+        return otp;
+    }
+
+    public void setOtp(String otp) {
+        this.otp = otp;
     }
 }
