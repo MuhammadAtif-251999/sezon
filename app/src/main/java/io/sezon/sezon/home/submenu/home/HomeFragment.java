@@ -31,9 +31,11 @@ import com.mikepenz.fastadapter.listeners.ClickEventHook;
 import io.sezon.sezon.MangJekApplication;
 import io.sezon.sezon.R;
 import io.sezon.sezon.adapter.ItemOffsetDecoration;
+import io.sezon.sezon.adapter.response;
 import io.sezon.sezon.api.ServiceGenerator;
 import io.sezon.sezon.api.service.BookService;
 import io.sezon.sezon.api.service.UserService;
+import io.sezon.sezon.api.service.jason;
 import io.sezon.sezon.barcode.ScanActivity;
 import io.sezon.sezon.home.submenu.TopUpActivity;
 import io.sezon.sezon.home.submenu.setting.UpdateProfileActivity;
@@ -65,6 +67,7 @@ import io.sezon.sezon.model.PromosiMFood;
 import io.sezon.sezon.model.PromosiMLaundry;
 import io.sezon.sezon.model.RestoranNearMeDB;
 import io.sezon.sezon.model.User;
+import io.sezon.sezon.model.data;
 import io.sezon.sezon.model.json.book.GetDataLaundryRequestJson;
 import io.sezon.sezon.model.json.book.GetDataLaundryResponseJson;
 import io.sezon.sezon.model.json.book.GetDataRestoRequestJson;
@@ -73,6 +76,7 @@ import io.sezon.sezon.model.json.book.GetKendaraanAngkutResponseJson;
 import io.sezon.sezon.model.json.user.GetBannerResponseJson;
 import io.sezon.sezon.model.json.user.GetSaldoRequestJson;
 import io.sezon.sezon.model.json.user.GetSaldoResponseJson;
+import io.sezon.sezon.response_final_ouutput;
 import io.sezon.sezon.splash.SplashActivity;
 import io.sezon.sezon.utils.ConnectivityUtils;
 import io.sezon.sezon.utils.Log;
@@ -92,6 +96,8 @@ import me.relex.circleindicator.CircleIndicator;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class HomeFragment extends Fragment {
@@ -165,8 +171,8 @@ public class HomeFragment extends Fragment {
     @BindView(R.id.listLaundry_recycler)
     RecyclerView daftarLaundry;
 
-    @BindView(R.id.cargo_type_recyclerView)
-    RecyclerView cargoTypeRecyclerView;
+//    @BindView(R.id.cargo_type_recyclerView)
+//    RecyclerView cargoTypeRecyclerView;
 
     @BindView(R.id.slide_viewPager2)
     AutoScrollViewPager autoScrollViewPager2;
@@ -182,7 +188,11 @@ public class HomeFragment extends Fragment {
     private List<RestoranNearMeDB> restoran;
     private FastItemAdapter<KategoriItemHome> kategoriAdapter;
 
-
+    RecyclerView recyclerView;
+    jason jasonApi;
+    response recyclerAdapter;
+    GridLayoutManager layoutManager;
+    ArrayList<data> list = new ArrayList<>();
     private List<Laundry> laundryAll;
     private List<LaundryNearMeDB> laundryByLocation;
     private FastItemAdapter<LaundryItemHome> adapterListLaundry;
@@ -236,9 +246,24 @@ public class HomeFragment extends Fragment {
         realm1 = Realm.getDefaultInstance();
         LoadKendaraan();
         cargodapter = new FastItemAdapter<>();
-        cargoTypeRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
-        cargoTypeRecyclerView.setAdapter(cargodapter);
+//        cargoTypeRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
+//        cargoTypeRecyclerView.setAdapter(cargodapter);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://svz.sezon.live/grocery/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
+        jasonApi = retrofit.create(jason.class);
+
+
+        recyclerView = view.findViewById(R.id.recyclerview);
+        layoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.HORIZONTAL,false);
+        recyclerAdapter = new response(getContext(), list);
+//        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(recyclerAdapter);
+        recyclerView.setHasFixedSize(true);
+        getdata();
 
         cargodapter.withItemEvent(new ClickEventHook<CargoItem>() {
             @Nullable
@@ -353,6 +378,41 @@ public class HomeFragment extends Fragment {
 
 
         ucapan();
+    }
+
+    private void getdata() {
+
+        Call<response_final_ouutput> ouutputCall =jasonApi.getFinaloutput();
+
+        ouutputCall.enqueue(new Callback<response_final_ouutput>() {
+            @Override
+            public void onResponse(Call<response_final_ouutput> call, Response<response_final_ouutput> res) {
+                if (res.isSuccessful()) {
+
+                    response_final_ouutput response = res.body();
+                    if (res.body().getListData() == null){
+
+                    }
+                    else {
+                        list = response.getListData();
+                        recyclerAdapter = new response(getContext(), list);
+                        recyclerAdapter.notifyDataSetChanged();
+                        recyclerView.setAdapter(recyclerAdapter);
+                        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2,GridLayoutManager.HORIZONTAL,false));
+
+
+                        Log.d("Home Fragment",response.getListData().toString());
+                    }
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<response_final_ouutput> call, Throwable t) {
+
+            }
+        });
     }
 
     private void getImageBanner() {

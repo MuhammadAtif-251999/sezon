@@ -119,6 +119,9 @@ public class LaundryMenuActivity extends AppCompatActivity  implements MenuLaund
 
         Intent intent = getIntent();
         idLaundry = intent.getIntExtra(ID_LAUNDRY, -1);
+
+        Log.e("ADD ID Laundary", String.valueOf(idLaundry));
+
         namaLaundry = intent.getStringExtra(NAMA_LAUNDRY);
         alamatLaundry = intent.getStringExtra(ALAMAT_LAUNDRY);
         distanceLaundry = intent.getDoubleExtra(DISTANCE_LAUNDRY, -8);
@@ -275,6 +278,7 @@ public class LaundryMenuActivity extends AppCompatActivity  implements MenuLaund
                         Log.e("ADD lAUNDRY", menuItem.namaMenu + "");
                         Log.e("ADD LAUNDRY", menuItem.deskripsiMenu + "");
                         Log.e("ADD LAUNDRY", menuItem.harga + "");
+                        Log.e("ADD LAUNDRY Foto", menuItem.foto + "");
 
                     }
                 }

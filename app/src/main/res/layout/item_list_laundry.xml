@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+<androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
     android:layout_margin="5dp"
-    android:layout_height="195dp"
+    android:layout_height="wrap_content"
     android:background="@color/material_light_white"
     android:orientation="vertical">
 
@@ -21,48 +26,103 @@
 
 
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:adjustViewBounds="true"
-            android:id="@+id/foto_makanan"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:scaleType="fitXY"
-            app:riv_border_color="@color/transparent"
-            android:src="@drawable/ic_efood"
-            app:riv_corner_radius="5dp" />
-
+<!--        <com.makeramen.roundedimageview.RoundedImageView-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:id="@+id/foto_makanan"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            app:riv_border_color="@color/transparent"-->
+<!--            android:src="@drawable/ic_efood"-->
+<!--            app:riv_corner_radius="5dp" />-->
 
         <TextView
-            android:layout_below="@id/foto_makanan"
-            android:gravity="center"
-            android:textStyle="bold"
+
             android:id="@+id/laundry_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="161dp"
             android:layout_marginBottom="5dp"
             android:text="Ayam Bakar Geprek"
             android:textColor="@color/material_blue_grey_700"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:layout_alignParentBottom="true"
-            android:id="@+id/harga_text"
-            android:layout_width="wrap_content"
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/laundry_text"
+            app:fillColor="#FFFFFFFF"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="Rp. 18.000"
-            android:textStyle="bold"
-            android:textColor="@color/greyText"
-            android:textSize="13sp" />
+            android:orientation="horizontal"
+            android:id="@+id/item_linear"
+            android:layout_below="@id/carouselView"
+            android:weightSum="3"
+            >
+
+            <TextView
+                android:id="@+id/weight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="1.5kg"
+                android:textStyle="bold"
+                android:gravity="center"
+
+                android:textColor="@color/greyText"
+                android:layout_weight="1"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/stock_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="15"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/greyText"
+                android:textSize="16sp" />
+            <TextView
+
+                android:id="@+id/harga_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Rp. 18.000"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/greyText"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/deskripsi_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/makanan_text"
+            android:layout_below="@+id/item_linear"
             android:layout_marginLeft="10dp"
             android:lines="2"
-            android:layout_toRightOf="@id/foto_makanan"
+
             android:text="4pcs wings, french fries asda sasd asd asd asd asd"
             android:textColor="@color/grey"
             android:textSize="10sp"
@@ -70,7 +130,7 @@
             android:layout_alignEnd="@+id/notes_text" />
 
         <EditText
-            android:layout_toRightOf="@id/foto_makanan"
+            android:layout_toRightOf="@id/carouselView"
             android:id="@+id/notes_text"
             android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
@@ -95,21 +155,25 @@
             android:textSize="18sp" />
 
         <TextView
-            android:background="@drawable/bg_add"
             android:id="@+id/add_quantity"
-            android:textStyle="bold|normal"
             android:layout_width="wrap_content"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:gravity="center"
+            android:layout_below="@+id/deskripsi_text"
+            android:layout_gravity="center"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="198dp"
+            android:layout_toStartOf="@+id/notes_text"
+            android:background="@drawable/bg_add"
+            android:paddingLeft="12dp"
+
+            android:paddingTop="2dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="2dp"
             android:text="Buy"
             android:textColor="@color/white"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:textStyle="bold|normal" />
+
 
         <TextView
             android:visibility="gone"
@@ -127,4 +191,15 @@
 
 
     </RelativeLayout>
+
 </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RecyclerV"
+        android:background="@color/white"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

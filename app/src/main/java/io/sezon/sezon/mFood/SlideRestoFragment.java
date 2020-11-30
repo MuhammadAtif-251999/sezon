@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,6 +98,9 @@ public class SlideRestoFragment extends Fragment {
                             intent.putExtra(FoodMenuActivity.IS_OPEN, restoran.isOpen());
                             intent.putExtra(FoodMenuActivity.PICTURE_URL, restoran.getFotoResto());
                             intent.putExtra(FoodMenuActivity.IS_MITRA, restoran.isPartner());
+
+                            Log.d("ADD FOOD HERE", String.valueOf(response.body().getFoodResto().getDetailRestoran().get(0)));
+
                             startActivity(intent);
                         } else {
                             onFailure(call, new RuntimeException("Check internet connection."));

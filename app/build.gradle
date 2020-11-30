@@ -53,6 +53,7 @@ dependencies {
     implementation 'androidx.mediarouter:mediarouter:1.0.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.drawerlayout:drawerlayout:1.1.0'
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -99,6 +100,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:20.0.0'
     implementation 'com.google.firebase:firebase-core:17.2.0'
 //    implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'info.androidhive:barcode-reader:1.1.5'
     implementation 'com.google.android.gms:play-services-vision:18.0.0'
     implementation 'com.afollestad.material-dialogs:core:0.9.0.0'
@@ -108,6 +110,8 @@ dependencies {
 //    apt 'com.jakewharton:butterknife-compiler:8.4.0'
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    implementation 'com.synnapps:carouselview:0.1.4'
 
 
     //    compile 'com.afollestad.material-dialogs:core:0.9.0.0'

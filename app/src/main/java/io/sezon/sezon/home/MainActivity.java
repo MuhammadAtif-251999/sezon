@@ -204,6 +204,8 @@ public class MainActivity extends AppCompatActivity implements SnackbarControlle
                 DrawerLayout navDrawer = findViewById(R.id.drawer_layout);
                 // If navigation drawer is not open yet open it else close it.
                 if(!navDrawer.isDrawerOpen(GravityCompat.START)) navDrawer.openDrawer(Gravity.START);
+
+
                 else navDrawer.closeDrawer(Gravity.END);
             }
         });

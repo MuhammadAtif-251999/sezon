@@ -15,6 +15,7 @@
     <color name="hijau">#00f504</color>
     <color name="ijo">#06cf0a</color>
     <color name="hijautua">#038e05</color>
+    <color name="TransparentColor">#99141414</color>
     <color name="bg">#f7f7f7</color>
     <color name="colorAccentSecondary">#ad1a7f</color>
     <color name="viewBg">#f8f8f8</color>

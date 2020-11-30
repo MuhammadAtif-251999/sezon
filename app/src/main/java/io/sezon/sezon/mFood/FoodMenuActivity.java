@@ -345,6 +345,8 @@ public class FoodMenuActivity extends AppCompatActivity implements MakananItem.O
                     realm.copyToRealm(restoranList);
                     realm.commitTransaction();
 
+
+
                     makananAdapter.clear();
                     MenuItem menuItem;
                     for (int i = 0; i < menuMakanan.size(); i++) {
@@ -364,6 +366,9 @@ public class FoodMenuActivity extends AppCompatActivity implements MakananItem.O
                         makananItem.harga = makanan.get(i).getHarga();
                         makananItem.foto=makanan.get(i).getFoto();
                         makananAdapter.add(makananItem);
+                        Log.e("ADD TEST",makanan.get(i).getFoto());
+
+
                         Log.e("Nid manann", makananItem.id + "");
                         Log.e("Nama makanan", makananItem.namaMenu + "");
                     }

@@ -105,6 +105,7 @@ public class SignInActivity extends DialogActivity implements Validator.Validati
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
         ButterKnife.bind(this);
 
         validator = new Validator(this);

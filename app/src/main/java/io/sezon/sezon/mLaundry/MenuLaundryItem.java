@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.mikepenz.fastadapter.items.AbstractItem;
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 import io.sezon.sezon.MangJekApplication;
 import io.sezon.sezon.R;
@@ -47,6 +49,8 @@ public class MenuLaundryItem extends AbstractItem<MenuLaundryItem, MenuLaundryIt
     private Realm realm;
 
     private TextWatcher catatanUpdater;
+
+    int[] sampleImages = {R.drawable.grocery, R.drawable.resto_malam, R.drawable.resto_pagi};
 
     public MenuLaundryItem(Context context, OnCalculatePrice calculatePrice) {
         this.context = context;
@@ -88,10 +92,16 @@ public class MenuLaundryItem extends AbstractItem<MenuLaundryItem, MenuLaundryIt
         holder.quantityText.setText(String.valueOf(quantity));
         holder.notesText.setEnabled(quantity > 0);
         holder.notesText.setText(catatan);
-        Glide.with(context)
-                .load(foto)
-                .placeholder(R.drawable.ic_restoran)
-                .into(holder.fotoItem);
+
+//        Glide.with(context)
+//                .load(foto)
+//                .placeholder(R.drawable.ic_restoran)
+//                .into(holder.fotoItem);
+
+        holder.carouselView.setPageCount(sampleImages.length);
+        holder.carouselView.setImageListener(imageListener);
+
+
 
         holder.notesText.addTextChangedListener(catatanUpdater);
 
@@ -135,6 +145,13 @@ public class MenuLaundryItem extends AbstractItem<MenuLaundryItem, MenuLaundryIt
 
 
     }
+
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(sampleImages[position]);
+        }
+    };
 
     private void CalculateCost() {
 //        cost = 1 * harga;
@@ -198,8 +215,8 @@ public class MenuLaundryItem extends AbstractItem<MenuLaundryItem, MenuLaundryIt
         @BindView(R.id.notes_text)
         EditText notesText;
 
-        @BindView(R.id.foto_makanan)
-        ImageView fotoItem;
+//        @BindView(R.id.foto_makanan)
+//        ImageView fotoItem;
 
         @BindView(R.id.add_quantity)
         TextView addQuantity;
@@ -209,6 +226,9 @@ public class MenuLaundryItem extends AbstractItem<MenuLaundryItem, MenuLaundryIt
 
         @BindView(R.id.remove_quantity)
         TextView removeQuantity;
+
+        @BindView(R.id.carouselView)
+        CarouselView carouselView;
 
 
 

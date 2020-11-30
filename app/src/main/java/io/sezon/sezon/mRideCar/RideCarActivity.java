@@ -242,6 +242,7 @@ public class RideCarActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ride_car);
         ButterKnife.bind(this);
+        Log.i("Fuck","Fuck you developer");
 
         pakaikas.setBackgroundResource(R.drawable.bg_tidak_pilih);
         pakaikas.setClickable(true);
